@@ -1,0 +1,371 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    --whitish-text: #C0C0C0;
+    background-color: black;
+}
+
+header {
+    height: 100px;
+    background-color: #181818;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    place-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hn {
+    display: inline;
+    margin-left: 32px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.hn:last-of-type {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.main-slogan {
+    height: 715px;
+    background-image: url('../assets/IMAGE-13.svg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.photo-settings {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+}
+
+.desc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 430px 0 430px;
+    box-sizing: border-box;
+}
+
+.d-1 {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    color: var(--whitish-text);
+}
+
+.d-2 {
+    font-size: 54px;
+    line-height: 59px;
+}
+
+.d-3 {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--whitish-text);
+    margin-top: 15px;
+}
+
+.what-we-do {
+    height: 1558px;
+}
+
+.wwd {
+    margin-top: 112px;
+    font-size: 40px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.areas {
+    margin-top: 15px;
+    font-size: 23px;
+    line-height: 30px;
+    color: var(--whitish-text);
+    text-align: center;
+}
+
+.areas-grid {
+    margin-top: 42px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 16px;
+    padding: 0 136px 0 136px;
+}
+
+.area {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    position: relative;
+}
+
+.area:nth-of-type(1) {
+    background-image: url('../assets/IMAGE-9.svg');
+}
+
+.area:nth-of-type(2) {
+    background-image: url('../assets/IMAGE-10.svg');
+}
+
+.area:nth-of-type(3) {
+    background-image: url('../assets/IMAGE-11.svg');
+}
+
+.area:nth-of-type(4) {
+    background-image: url('../assets/IMAGE-12.svg');
+}
+
+.area-desc {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.ar-header {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.ar-desc {
+    margin-bottom: 20px;
+}
+
+.read {
+    background-color: white;
+    color: black;
+    padding: 10px 10px 10px 42px;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    border-radius: 14px;
+    width: fit-content;
+}
+
+.read::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-color: black;
+    position: absolute;
+    bottom: 4px;
+    left: 5px;
+    border-radius: 40px;
+}
+
+.fuji {
+    background-image: url('../assets/IMAGE-8.svg');
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.img-text {
+    position: absolute;
+    right: 150px;
+    width: 300px;
+}
+
+.img-header {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.img-desc {
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--whitish-text);
+}
+
+.tools {
+    height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+.tools-desc {
+    position: absolute;
+    left: 100px;
+    bottom: 150px;
+    width: 40%;
+}
+
+.tools-header {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+
+.tools-img {
+    background-image: url('../assets/IMAGE-7.svg');
+    background-size: cover;
+    position: relative;
+}
+
+.leafs {
+    background-image: url('../assets/IMAGE-6.svg');
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.past-clients {
+    height: 500px;
+}
+
+.past {
+    font-size: 40px;
+    line-height: 42px;
+    text-align: center;
+    margin-top: 115px;
+}
+
+.trusted {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    color: var(--whitish-text);
+}
+
+.past-imgs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+    margin-top: 80px;
+}
+
+.star-fall {
+    height: 600px;
+    background-image: url('../assets/IMAGE.svg');
+    background-size: cover;
+    background-position-y: bottom;
+    position: relative;
+    display: grid;
+    align-items: center;
+}
+
+.need-help {
+    display: grid;
+    place-items: center;
+}
+
+.ndhp {
+    margin-top: 30px;
+    position: relative;
+}
+
+footer {
+    margin-top: 100px;
+    padding: 0 136px 136px 136px;
+    position: relative;
+}
+
+.slogan {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--whitish-text);
+    margin-top: 20px;
+}
+
+.footer-container {
+    height: 230px;
+}
+
+.fn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 440px;
+    position: absolute;
+    right: 136px;
+    top: 0;
+}
+
+.fn {
+    color: white;
+    margin-top: 10px;
+}
+
+.footer-subs {
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    margin: auto;
+    position: relative;
+    height: 132px;
+    padding: 36px 0 0 0;
+    box-sizing: border-box;
+}
+
+.fsubs-1 {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.fsubs-2 {
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--whitish-text);
+    position: absolute;
+    bottom: 36px;
+}
+
+.input-subs {
+    width: 450px;
+    height: 50px;
+    border-radius: 12px;
+    position: absolute;
+    right: 0;
+    bottom: 36px;
+}
+
+.input-label::after {
+    content: "";
+    background-color: black;
+    width: 63px;
+    height: 30px;
+    border-radius: 11px;
+    position: absolute;
+    right: 6px;
+    bottom: 47px;
+}
+
+.licensing {
+    margin-top: 56px;
+}
+
+.services {
+    position: absolute;
+    right: 130px;
+    bottom: 130px;
+}
+
+.service {
+    margin-left: 20px;
+}

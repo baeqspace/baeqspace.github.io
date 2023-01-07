@@ -1,0 +1,488 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: auto;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    height: 185px;
+}
+
+.header-1 {
+    background: linear-gradient(269.91deg, rgba(46, 49, 146, 0.7) 0%, rgba(212, 20, 90, 0.7) 98.16%);;
+    height: 77px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.phones {
+    position: absolute;
+    top: 31px;
+    left: 128px;
+}
+
+.phone {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 10px;
+    margin-right: 12px;
+}
+
+.city {
+    font-size: 15px;
+    line-height: 16px;
+    font-weight: 500;
+}
+
+.visit {
+    position: absolute;
+    top: 23px;
+    right: 90px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+.visit img {
+    position: absolute;
+    right: 110px;
+    top: 0;
+}
+
+.logo {
+    color: black;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 43px;
+    position: absolute;
+    top: 130px;
+    left: 120px;
+}
+
+.logo img {
+    position: relative;
+    left: 5px;
+    top: 17px;
+}
+
+.img-text {
+    position: relative;
+    right: 8px;
+    top: 5px;
+}
+
+.header-nav {
+    position: absolute;
+    top: 130px;
+    right: 120px;
+}
+
+.hn {
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #737373;
+}
+
+.slogan {
+    height: 550px;
+    position: relative;
+}
+
+.sl1 {
+    position: absolute;
+    top: 190px;
+    left: 120px;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+}
+
+.sl2 {
+    position: absolute;
+    top: 320px;
+    left: 120px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.order {
+    width: 180px;
+    height: 55px;
+    top: 370px;
+    left: 120px;
+    position: absolute;
+    border-radius: 7px;
+    background: linear-gradient(95.2deg, #B90160 2.23%, #2E3192 99.51%);
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 24px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.imgs-back {
+    position: absolute;
+    right: 50%;
+}
+
+.lil-img {
+    position: absolute;
+}
+
+.lil-img:nth-of-type(1) {
+    left: 85px;
+    top: 500px;
+}
+
+.lil-img:nth-of-type(2) {
+    left: 140px;
+    top: 470px;
+}
+
+.lil-img:nth-of-type(3) {
+    left: 170px;
+    top: 525px;
+}
+
+.lil-img:nth-of-type(4) {
+    left: 430px;
+    top: 120px;
+}
+
+.lil-img:nth-of-type(5) {
+    left: 410px;
+    top: 110px;
+}
+
+.imgs-back img {
+    position: absolute;
+}
+
+.what-is {
+    margin-top: 250px;
+}
+
+.what {
+    text-align: center;
+    font-size: 50px;
+    line-height: 59px;
+}
+
+.eva {
+    background: linear-gradient(to bottom, #B90160, #3D5BF5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.props {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin-top: 120px;
+    background-image: url('assets/для\ фона.svg');
+    background-repeat: no-repeat;
+    height: 580px;
+}
+
+.prop {
+    width: 350px;
+    height: 435px;
+    border-radius: 9px;
+    box-shadow: 0 0 40px rgba(104,0,95,0.2);
+}
+
+.prop-container {
+    padding: 20px;
+}
+
+.prop-img {
+    height: 232px;
+    background-size: cover;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.prop:nth-of-type(1) .prop-img {
+    background-image: url('assets/image00004\ 1.svg');
+}
+
+.prop:nth-of-type(2) .prop-img {
+    background-image: url('assets/file\ 1.svg');
+}
+
+.prop:nth-of-type(3) .prop-img {
+    background-image: url('assets/kov1-1-300x225\ 1.svg');
+}
+
+.prop-header {
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.prop-desc {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #767676;
+    margin-top: 20px;
+}
+
+.reviews {
+    position: relative;
+}
+
+.reviews-container {
+    scroll-behavior: smooth;
+    padding: 0 33%;
+    scroll-snap-type: x mandatory;
+    gap: 33%;
+    display: grid;
+    grid-template-columns: repeat(3, 605px);
+    place-items: center;
+    overflow-x: hidden;
+    margin-top: 64px;
+    height: 360px;
+    background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+}
+
+.dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.dot {
+    display: inline-block;
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #444;
+    border-radius: 10px;
+    background-color: grey;
+    transition: .25s;
+}
+
+.dot:hover {
+    cursor: pointer;
+    background-color: darkgrey;
+}
+
+.review {
+    scroll-snap-align: center;
+    width: 535px;
+    height: 150px;
+    background-color: white;
+    display: grid;
+    text-align: center;
+    border-radius: 9px;
+    padding: 40px 44px 30px 44px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0,0,0,0.25);
+    transition: .25s;
+}
+
+.rev-img {
+    background-size: cover;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.rev-text {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+}
+
+.rev-name {
+    margin: 0 auto 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    color: #8E8E8E;
+}
+
+.rev-name::before {
+    display: block;
+    width: 130px;
+    height: 2px;
+    background: linear-gradient(to right, #D4145A, #3D5BF5);
+    content: "";
+    margin: 0 auto 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 150px 15% 0 15%;
+    box-sizing: border-box;
+    height: 300px;
+    background-image: url('assets/для\ фона-1.svg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.footer-header {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-desc {
+    font-size: 14px;
+    margin-bottom: 70px;
+}
+
+@media screen and (max-width: 1200px) {
+    .phones {
+        display: none;
+    }
+    
+    .imgs-back {
+        display: none;
+    }
+    
+    .props {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        height: auto;
+    }
+
+    .prop {
+        width: 90%;
+    }
+
+    .reviews {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .review {
+        opacity: 1;
+        margin-top: 80px;
+        margin-bottom: 55px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .slogan {
+        height: fit-content;
+        margin-top: 100px;
+    }
+    
+    .slogan * {
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+
+    .logo {
+        position: static;
+        width: fit-content;
+        margin: 35px auto 0 auto;
+    }
+
+    .sl1, .sl2 {
+        position: static;
+        height: fit-content;
+    }
+
+    .visit, .header-nav {
+        display: none;
+    }
+
+    .order {
+        position: static;
+        margin: 10px auto 0 auto;
+        display: block;
+    }
+
+    .phones {
+        position: static;
+        display: block;
+    }
+
+    .phone {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .header-1 {
+        display: block;
+        padding-top: 22px;
+    }
+
+    .header-1 * {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
+    .city {
+        display: block;
+        position: static;
+        font-size: 17px;
+    }
+
+    .city img, .phones img {
+        display: none;
+    }
+
+    .imgs-back, .lil-img {
+        display: none;
+    }
+
+    .what-is {
+        margin-top: 55px;
+    }
+
+    .review {
+        height: 400px;
+        place-content: center;
+    }
+
+    .rev-img {
+        top: -50px;
+        transform: scale(1.5)
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
