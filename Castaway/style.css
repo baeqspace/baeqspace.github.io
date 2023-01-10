@@ -33,11 +33,11 @@ header {
 
 #nav-header {
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 50px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 500px;
+    width: 50%;
     height: 60px;
     align-items: center;
 }
@@ -60,25 +60,38 @@ header {
     height: 900px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
     align-items: center;
     position: relative;
 }
 
 .main-img {
-    width: 650px;
-    height: 873px;
+    width: 100%;
+    max-width: 600px;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('assets/IMAGE-2.svg');
+    justify-self: center;
+    position: relative;
 }
 
-#main-img-effect {
+.main-img::after {
+    display: block;
+    content: "";
+    width: 68px;
+    height: 74px;
     position: absolute;
-    top: -20px;
+    top: -30px;
     left: -30px;
+    background-image: url('assets/IMAGE-3.svg');
 }
 
 .slogan {
     color: white;
     font-weight: 400;
-    font-size: 70px;
+    font-size: calc(2.5vw + 2.5vh);
     line-height: 88px;
     letter-spacing: 3.2px;
     margin: 0 !important;
@@ -111,14 +124,13 @@ header {
 }
 
 .episodes {
-    height: 2000px;
     position: relative;
     margin-top: 100px;
 }
 
 .header {
     font-weight: 400;
-    font-size: 64px;
+    font-size: calc(2.5vw + 2.5vh);
     line-height: 79px;
     letter-spacing: 2.88px;
     color: white;
@@ -139,7 +151,6 @@ header {
 }
 
 .episode {
-    height: 550px;
     padding: 40px;
     box-sizing: border-box;
     background-color: black;
@@ -153,6 +164,10 @@ header {
 
 .episode img {
     align-self: center;
+}
+
+.ep {
+    width: 85%;
 }
 
 .ep-topic {
@@ -179,7 +194,7 @@ header {
 .ep-header {
     color: white;
     font-weight: 400;
-    font-size: 64px;
+    font-size: calc(2.5vw + 2.5vh);
     line-height: 70px;
     margin-top: 20px;
 }
@@ -199,23 +214,21 @@ header {
     background-color: #118DA8;
     border: 0;
     border-radius: 6px;
-    position: absolute;
-    bottom: 40px;
+    margin-top: 20px;
     font-size: 18px;
     line-height: 27px;
 }
 
 .host {
-    height: 750px;
     margin-top: 260px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 100px;
 }
 
 .img-bio {
-    width: 650px;
-    height: 743px;
+    width: 100%;
+    max-height: 743px;
 }
 
 .arrow {
@@ -230,13 +243,12 @@ header {
 }
 
 .name {
-    font-size: 65px;
-    line-height: 79px;
+    font-size: calc(3vw + 2.5vh);
     letter-spacing: 2.88px;
 }
 
 .bio {
-    font-size: 22px;
+    font-size: 24px;
     line-height: 33px;
     color: var(--whitish-text);
     margin-top: 30px;
@@ -249,12 +261,13 @@ header {
     box-sizing: border-box;
     margin-top: 200px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    gap: 5%;
     position: relative;
 }
 
 .subs-text {
-    font-size: 72px;
+    font-size: calc(3vw + 2.5vh);
     line-height: 79px;
     letter-spacing: 2.88px;
 }
@@ -266,7 +279,7 @@ header {
 }
 
 input {
-    width: 520px;
+    width: 100%;
     height: 70px;
     font-size: 24px;
     line-height: 29px;
@@ -292,10 +305,9 @@ input {
 
 .reviews {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: minmax(200px, 300px);
     gap: 16px;
-    height: 700px;
     margin-top: 200px;
 }
 
@@ -322,7 +334,8 @@ input {
 footer {
     margin-top: 200px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
 }
 
 #nav-footer {
@@ -334,4 +347,25 @@ footer {
     text-align: left;
     margin-bottom: 10px;
     width: fit-content;
+}
+
+@media (max-width: 1100px) {
+    .episode {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+
+    .episode img {
+        max-height: 400px;
+        align-self: left;
+        justify-self: left;
+    }
+
+    .ep-header, .ep-detail {
+        margin-top: 10px;
+    }
+
+    .ep-topic {
+        margin-bottom: 10px;
+    }
 }

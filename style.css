@@ -21,10 +21,11 @@ body {
 }
 
 a {
-    font-size: calc(2.5vw + 2.5vh);
+    font-size: calc(2vw + 2.5vh);
     color: whitesmoke;
     text-decoration: none;
     text-align: center;
+    padding: 1vh;
     display: grid;
     border-radius: 10px;
     place-content: center;
@@ -35,7 +36,7 @@ a {
 a:hover {
     background-color: yellowgreen;
     color: black;
-    height: 120px;
+    height: 16vh;
 }
 
 @media (max-width: 700px) {

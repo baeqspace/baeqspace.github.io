@@ -1,8 +1,12 @@
 let slider = document.querySelector('.reviews-container')
-let maxScroll = slider.scrollWidth - slider.clientWidth
+let maxScroll = slider.scrollWidth - slider.clientWidth - 200
+
+document.onresize = ()=>{
+    maxScroll = slider.scrollWidth - slider.clientWidth - 200
+}
 
 const move = (isRight) => {
-    slider.scrollBy(isRight ? 300 : -300,0)
+    slider.scrollBy(isRight ? 500 : -300,0)
 }
 
 let interval;

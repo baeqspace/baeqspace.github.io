@@ -108,7 +108,7 @@ header {
     position: absolute;
     top: 190px;
     left: 120px;
-    font-size: 50px;
+    font-size: calc(2.5vw + 2vh);
     font-weight: 900;
     line-height: 60px;
 }
@@ -469,16 +469,6 @@ footer {
 
     .what-is {
         margin-top: 55px;
-    }
-
-    .review {
-        height: 400px;
-        place-content: center;
-    }
-
-    .rev-img {
-        top: -50px;
-        transform: scale(1.5)
     }
 
     footer {

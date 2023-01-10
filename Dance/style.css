@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    --padding: 10%;
 }
 
 p {
@@ -77,7 +78,7 @@ header {
 
 .how-it-works {
     height: 600px;
-    padding: 70px 0 70px 120px;
+    padding: 70px 0 70px var(--padding);
     color: #49464F;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -113,7 +114,7 @@ header {
 }
 
 .move-your-way {
-    padding: 70px 120px;
+    padding: 70px var(--padding);
     color: #2E2C34;
     background-color: #F5F5F7;
 }
@@ -125,7 +126,7 @@ header {
 
 .card-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     justify-items: center;
     gap: 15px;
     margin-top: 50px;
@@ -199,7 +200,7 @@ header {
 }
 
 .just-ride {
-    padding: 70px 120px;
+    padding: 70px var(--padding);
     height: 525px;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -208,7 +209,7 @@ header {
 }
 
 .just {
-    font-size: 67px;
+    font-size: calc(2vw + 2vh);
 }
 
 .your-local {
@@ -242,7 +243,7 @@ header {
 }
 
 .your {
-    font-size: 67px;
+    font-size: calc(3vw + 2vh);
     margin-top: 275px;
 }
 
@@ -261,7 +262,7 @@ header {
 }
 
 .your-cities {
-    font-size: 100px;
+    font-size: calc(3vw + 5vh);
     justify-self: end;
     align-self: center;
     margin-top: 65px;
@@ -269,15 +270,15 @@ header {
 }
 
 .charge {
-    padding: 70px 120px;
+    padding: 70px var(--padding);
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 40% repeat(auto-fit, minmax(200px, 1fr));
     gap: 50px;
     color: #2E2C34;
 }
 
 .you-charge {
-    font-size: 65px;
+    font-size: calc(2vw + 2vh);
 }
 
 .subs {
@@ -312,13 +313,6 @@ header {
 
 .charge .card {
     background-color: #F5F5F7;
-}
-
-.charge .card:nth-of-type(1) {
-    justify-self: end;
-}
-
-.charge .card:nth-of-type(2) {
     justify-self: end;
 }
 
@@ -367,7 +361,7 @@ header {
 
 .members {
     height: 465px;
-    padding: 70px 120px;
+    padding: 70px var(--padding);
 }
 
 .member {
@@ -468,4 +462,10 @@ footer label::before {
 
 .service {
     display: inline;
+}
+
+@media (max-width: 900px) {
+    nav .hn {
+        margin-left: 10px;
+    }
 }
