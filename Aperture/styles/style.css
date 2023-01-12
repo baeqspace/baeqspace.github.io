@@ -26,6 +26,7 @@ p {
     height: 100%;
     color: white;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 .hn {

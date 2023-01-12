@@ -14,6 +14,7 @@ p {
     width: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 input, input::placeholder, textarea, textarea::placeholder, button {
@@ -23,6 +24,7 @@ input, input::placeholder, textarea, textarea::placeholder, button {
 header {
     padding: 50px var(--padding) 0 var(--padding);
     color: white;
+    position: relative;
 }
 
 header .logo {
@@ -60,6 +62,8 @@ header .logo {
     height: 800px;
     margin-top: -70px;
     color: white;
+    position: relative;
+    z-index: -1;
 }
 
 .sl-cont {
@@ -118,9 +122,8 @@ header .logo {
     left: 40%;
     top: 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
     gap: 10%;
     width: calc(70% - 50px);
 }
@@ -671,6 +674,11 @@ footer .logo {
     .feat-container {
         position: static;
         width: 100%;
+        margin-top: 50px;
+    }
+
+    .feat {
+        width: 80%;
     }
 
     .f-1, .f-2 {
