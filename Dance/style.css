@@ -31,11 +31,14 @@ header {
     position: absolute;
     right: 90px;
     top: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 200px;
+    grid-template-rows: 30px;
+    place-items: center;
+    width: 40%;
 }
 
 .hn {
-    display: inline;
-    margin-left: 40px;
     font-size: 18px;
     color: white;
 }
@@ -52,32 +55,38 @@ header {
     background-size: cover;
     margin-top: -100px;
     text-align: center;
+    position: relative;
+    z-index: -1;
 }
 
 .slogan * {
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
+}
+
+.sl-cont {
     position: absolute;
+    bottom: 50%;
+    margin: 0 auto;
     left: 0;
     right: 0;
+    z-index: 0;
 }
 
 .sl-1 {
-    font-size: 99px;
+    font-size: 84px;
     letter-spacing: 5px;
-    top: 210px;
 }
 
 .sl-2 {
-    top: 470px;
+    margin-top: 20px;
 }
 
 .slogan .active {
-    top: 575px;
+    margin-top: 30px;
     width: fit-content;
 }
 
 .how-it-works {
-    height: 600px;
     padding: 70px 0 70px var(--padding);
     color: #49464F;
     display: grid;
@@ -91,7 +100,7 @@ header {
 }
 
 .sec-header {
-    font-size: 67px;
+    font-size: calc(5vw + 3vh);
 }
 
 .steps {
@@ -234,12 +243,11 @@ header {
 
 .your-city {
     padding: 70px 123px;
-    height: 715px;
     color: white;
     background-image: url('assets/IMAGE-5.svg');
     background-size: cover;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .your {
@@ -272,7 +280,7 @@ header {
 .charge {
     padding: 70px var(--padding);
     display: grid;
-    grid-template-columns: 40% repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 50px;
     color: #2E2C34;
 }
@@ -285,8 +293,6 @@ header {
     font-size: 21px;
     margin-top: 30px;
     margin-bottom: 35px;
-}.charge .card:nth-of-type(1) {
-    justify-self: end;
 }
 
 .check {
@@ -323,7 +329,7 @@ header {
 .know-more {
     height: 640px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     place-items: center;
     background-color: #F5F5F7;
 }
@@ -343,9 +349,9 @@ header {
 }
 
 .q {
-    width: 550px;
     height: 55px;
     font-size: 21px;
+    width: fit-content;
 }
 
 .q::before {
@@ -360,8 +366,7 @@ header {
 }
 
 .members {
-    height: 465px;
-    padding: 70px var(--padding);
+    padding: 70px var(--padding) 0 var(--padding);
 }
 
 .member {
@@ -370,7 +375,7 @@ header {
 
 .reviews {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20%;
     margin-top: 100px;
 }
@@ -465,7 +470,82 @@ footer label::before {
 }
 
 @media (max-width: 900px) {
-    nav .hn {
-        margin-left: 10px;
+    .logo {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .sl-1 {
+        font-size: 48px;
+    }
+
+    .sl-cont {
+        bottom: 40%;
+    }
+
+    .header-nav {
+        top: 100px;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        left: 0;
+        gap: 10% 0;
+    }
+
+    .header-nav .active {
+        grid-column: 2 / 4;
+    }
+
+    .just-ride {
+        grid-template-columns: 1fr;
+    }
+
+    .just-img {
+        width: 100%;
+        grid-row: 1;
+    }
+
+    .member {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .how-it-works {
+        grid-template-columns: 1fr;
+        gap: 10%;
+    }
+
+    .how-img {
+        width: 100%;
+        grid-row: 1;
+    }
+
+    .charge .card {
+        justify-self: start;
+    }
+
+    .subs {
+        width: 80%;
+    }
+
+    .check {
+        font-size: 18px;
+    }
+    
+    .your-cities {
+        text-align: center;
+    }
+
+    .questions {
+        width: 70%;
+    }
+
+    .q {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
     }
 }

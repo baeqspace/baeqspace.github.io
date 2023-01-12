@@ -85,10 +85,6 @@ p {
     width: 50%;
 }
 
-.what-we-do {
-    height: 1558px;
-}
-
 .wwd {
     margin-top: 112px;
     font-size: 40px;
@@ -107,7 +103,7 @@ p {
 .areas-grid {
     margin-top: 42px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
     gap: 16px;
     padding: 0 var(--padding) 0 var(--padding);
@@ -258,7 +254,8 @@ p {
 
 .past-imgs {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10%;
     place-items: center;
     margin-top: 80px;
 }
@@ -297,10 +294,6 @@ footer {
     width: 40%;
 }
 
-.footer-container {
-    height: 230px;
-}
-
 .fn-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -320,7 +313,6 @@ footer {
     border-bottom: 2px solid white;
     margin: auto;
     position: relative;
-    height: 132px;
     padding: 36px 0 0 0;
     box-sizing: border-box;
 }
@@ -336,7 +328,7 @@ footer {
     line-height: 20px;
     color: var(--whitish-text);
     position: absolute;
-    bottom: 36px;
+    top: 60px;
 }
 
 .input-subs {
@@ -356,7 +348,7 @@ footer {
     border-radius: 11px;
     position: absolute;
     right: 6px;
-    bottom: 47px;
+    bottom: 15px;
 }
 
 .licensing {
@@ -378,11 +370,53 @@ footer {
         --padding: 1%;
     }
 
+    .desc {
+        bottom: 150px;
+    }
+
+    .img-text {
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+        width: fit-content;
+    }
+
+    .photo-settings {
+        transform: scale(0.75);
+    }
+
+    .tools-desc {
+        bottom: 70px;
+        left: 10px;
+    }
+
+    .ar-desc {
+        font-size: 14px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+    }
+
     .hn {
         margin-left: 10px;
     }
 
-    .tools-desc {
-        left: 10px;
+    .fn-container {
+        position: static;
+        grid-template-columns: 1fr;
+    }
+
+    .input-subs {
+        position: static;
+        margin-top: 40px;
+        width: 100%;
+    }
+
+    .services {
+        position: static;
+        margin: 20px auto 0 auto;
+        width: fit-content;
     }
 }

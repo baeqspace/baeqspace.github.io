@@ -1,7 +1,7 @@
 let scroller = document.querySelector('.kick-3')
 let left = document.querySelector('.button-left')
 let right = document.querySelector('.button-right')
-let maxScroll = scroller.scrollWidth - scroller.clientWidth
+let maxScroll = scroller.scrollWidth - scroller.clientWidth - 200
 
 const move = (isRight) => {
     scroller.scrollBy(isRight ? 300 : -300,0)

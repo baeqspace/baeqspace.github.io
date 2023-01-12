@@ -36,7 +36,8 @@ header .logo {
     width: 30%;
     display: grid;
     gap: 5%;
-    grid-template-columns: repeat(5,1fr) 140px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
     align-items: center;
 }
 
@@ -61,19 +62,19 @@ header .logo {
     color: white;
 }
 
-.sl-1 {
+.sl-cont {
     position: absolute;
-    top: 240px;
+    top: 250px;
     left: var(--padding);
+}
+
+.sl-1 {
     font-size: 42px;
 }
 
 .sl-2 {
-    position: absolute;
-    top: 375px;
-    left: var(--padding);
+    margin-top: 20px;
     font-size: 11px;
-    line-height: 30px;
 }
 
 .blue-button {
@@ -86,18 +87,15 @@ header .logo {
 }
 
 .slogan .blue-button {
-    position: absolute;
-    top: 470px;
-    left: var(--padding);
     width: 175px;
     height: 60px;
+    margin-top: 20px;
 }
 
 .features {
     width: 60%;
     margin: -80px auto 0 auto;
     background-color: white;
-    height: 350px;
     padding: 95px 40px;
     position: relative;
 }
@@ -117,14 +115,13 @@ header .logo {
 
 .feat-container {
     position: absolute;
-    left: 45%;
-    top: 5%;
+    left: 40%;
+    top: 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    gap: 5%;
-    height: 350px;
+    gap: 10%;
     width: calc(70% - 50px);
 }
 
@@ -140,7 +137,6 @@ header .logo {
 }
 
 .where-now {
-    height: 950px;
     padding: 0 var(--padding) 150px var(--padding);
 }
 
@@ -236,7 +232,6 @@ header .logo {
 
 .done-jobs {
     margin-top: -500px;
-    height: 1370px;
 }
 
 .jobs {
@@ -354,7 +349,7 @@ header .logo {
 }
 
 .form {
-    width: 600px;
+    width: 60%;
     height: 571px;
     margin: -550px auto 0 auto;
     padding: 30px 50px;
@@ -446,7 +441,7 @@ header .logo {
 
 .res-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15%;
     margin-top: 75px;
 }
@@ -543,7 +538,7 @@ header .logo {
 .kick-3 {
     margin-top: 75px;
     display: grid;
-    grid-template-columns: repeat(7,600px);
+    grid-template-columns: repeat(7,70%);
     gap: 50px;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -584,7 +579,6 @@ header .logo {
 }
 
 footer {
-    height: 800px;
     margin-top: 150px;
     background-color: #0E0E33;
     color: white;
@@ -652,15 +646,85 @@ footer .logo {
         --padding: 5%;
     }
 
+    header .logo {
+        margin: 0 auto;
+        width: fit-content;
+        left: 0;
+        right: 0;
+    }
+
     .header-nav {
-        width: 60%;
+        width: 100%;
+        top: 100px;
+    }
+
+    .sl-2 {
+        line-height: auto;
+        top: 400px;
     }
 
     .features {
         width: 90%;
+        text-align: center;
+    }
+
+    .feat-container {
+        position: static;
+        width: 100%;
+    }
+
+    .f-1, .f-2 {
+        width: 100%;
     }
 
     .res-container {
         gap: 0;
+    }
+
+    .stages {
+        width: 100%;
+    }
+
+    .award {
+        margin-right: 0;
+    }
+
+    .industry {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        gap: 0;
+    }
+
+    .step {
+        padding: 40px;
+        height: auto;
+    }
+
+    .in-2 {
+        width: 100%;
+    }
+
+    .button-left {
+        width: 40px;
+        height: 40px;
+        left: 20px;
+        bottom: 10px;
+    }
+
+    .button-right {
+        width: 40px;
+        height: 40px;
+        right: 20px;
+        bottom: 10px;
+    }
+
+    .social {
+        bottom: 80px;
+    }
+
+    .main-footer {
+        gap: 10px;
     }
 }
