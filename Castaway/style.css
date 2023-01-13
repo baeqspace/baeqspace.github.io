@@ -68,14 +68,14 @@ header {
 }
 
 .main-img {
-    width: 100%;
+    width: 70%;
     max-width: 600px;
-    height: 70%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url('assets/IMAGE-2.svg');
-    justify-self: center;
+    justify-self: start;
     position: relative;
 }
 
@@ -307,9 +307,10 @@ input {
 
 .reviews {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-template-rows: minmax(200px, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: minmax(200px, 400px);
     gap: 16px;
+    justify-items: center;
     margin-top: 200px;
 }
 
@@ -338,6 +339,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
+}
+
+.services-bottom {
+    justify-items: center;
 }
 
 #nav-footer {
@@ -384,6 +389,7 @@ footer {
 
     .slogan {
         text-align: center;
+        line-height: 75px;
     }
 
     .container {
@@ -411,5 +417,9 @@ footer {
 
     .ep-topic {
         margin-bottom: 10px;
+    }
+
+    .services-bottom {
+        margin: 0 auto;
     }
 }
