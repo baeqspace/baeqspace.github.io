@@ -669,12 +669,17 @@ footer .logo {
     .features {
         width: 90%;
         text-align: center;
+        box-sizing: border-box;
     }
 
     .feat-container {
         position: static;
         width: 100%;
         margin-top: 50px;
+    }
+
+    .where-now {
+        margin-top: 75px;
     }
 
     .feat {
@@ -706,7 +711,7 @@ footer .logo {
     }
 
     .step {
-        padding: 40px;
+        padding: 20px;
         height: auto;
     }
 
@@ -728,11 +733,20 @@ footer .logo {
         bottom: 10px;
     }
 
+    .question {
+        padding-right: 45px;
+    }
+
     .social {
         bottom: 80px;
     }
 
     .main-footer {
         gap: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ftr-column:nth-of-type(2) {
+        display: none;
     }
 }

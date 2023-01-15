@@ -379,6 +379,11 @@ footer {
         display: block;
     }
 
+    .services-top {
+        margin: 120px auto;
+        width: fit-content;
+    }
+
     .main-slogan {
         grid-template-columns: 1fr;
     }
