@@ -15,11 +15,7 @@ p {
     width: 100%;
     height: 100%;
     overflow-x: hidden;
-<<<<<<< HEAD
-    box-sizing: border-box;
-=======
     font-size: 24px;
->>>>>>> d15beeb (new burger buttons for mobile)
 }
 
 header {
@@ -36,7 +32,7 @@ header {
 .header-nav {
     position: absolute;
     right: 90px;
-    top: 65px;
+    top: 40px;
     display: grid;
     grid-template-columns: repeat(4,20%) 200px;
     grid-template-rows: 30px;
@@ -346,11 +342,7 @@ header {
 .charge {
     padding: 70px var(--padding);
     display: grid;
-<<<<<<< HEAD
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-=======
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
->>>>>>> d15beeb (new burger buttons for mobile)
     gap: 50px;
     color: #2E2C34;
 }
@@ -399,14 +391,10 @@ header {
 
 .know-more {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     place-items: center;
     background-color: #F5F5F7;
-<<<<<<< HEAD
-    padding: 20px 0;
-=======
     padding: 50px 0;
->>>>>>> d15beeb (new burger buttons for mobile)
 }
 
 .want-know {
@@ -466,11 +454,7 @@ header {
 }
 
 footer {
-<<<<<<< HEAD
-    padding: 100px 80px 200px 80px;
-=======
     padding: 100px 80px;
->>>>>>> d15beeb (new burger buttons for mobile)
     background-image: url('assets/IMAGE-8.svg');
     background-size: cover;
     display: grid;
@@ -494,9 +478,7 @@ footer {
 }
 
 footer input {
-    width: 100%;
-    min-width: 250px;
-    max-width: 400px;
+    width: 315px;
     height: 55px;
     font-size: 16px;
     margin-top: 30px;
@@ -538,6 +520,7 @@ footer label::before {
 
 .fn {
     margin-bottom: 16px;
+    font-size: 16px;
 }
 
 .services {
@@ -603,18 +586,6 @@ footer label::before {
         grid-row: 1;
     }
 
-    .you-charge, .want-know, .member, .sec-header {
-        text-align: center;
-    }
-
-    .know-more {
-        justify-items: center;
-    }
-
-    .learn {
-        margin: 55px auto;
-    }
-
     .member {
         margin-top: 50px;
         text-align: center;
@@ -649,8 +620,7 @@ footer label::before {
     }
 
     .questions {
-        margin: 0 auto;
-        padding-left: 80px;
+        width: 70%;
     }
 
     .q {
@@ -658,33 +628,10 @@ footer label::before {
         width: 80%;
     }
 
-    .reviews {
-        height: 600px;
-        gap: 20px;
-    }
-
     footer {
         grid-template-columns: 1fr;
     }
 
-<<<<<<< HEAD
-    .footer-nav {
-        margin-top: 25px;
-        font-size: 24px;
-    }
-
-    .services {
-        bottom: 100px;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        width: fit-content;
-    }
-
-    .services img {
-        width: 30px;
-        height: 30px;
-=======
     .yc-main {
         margin: 0 auto;
         display: grid;
@@ -712,6 +659,5 @@ footer label::before {
     .card-container {
         width: 80%;
         margin: 50px auto;
->>>>>>> d15beeb (new burger buttons for mobile)
     }
 }
