@@ -18,6 +18,7 @@ p {
 
 header {
     height: 185px;
+    position: relative;
 }
 
 .header-1 {
@@ -348,6 +349,7 @@ header {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
     padding: 150px 15% 0 15%;
     box-sizing: border-box;
     height: 300px;
@@ -488,5 +490,16 @@ footer {
     footer {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+}
+
+@media (min-width: 2100px) {
+    .sl1, .sl2, .order {
+        margin-left: 10%;
+    }
+    .props {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

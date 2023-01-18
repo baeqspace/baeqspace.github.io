@@ -23,6 +23,7 @@ p {
     box-sizing: border-box;
     padding: 70px 15%;
     overflow-x: hidden;
+    font-size: 24px;
 }
 
 header {
@@ -31,24 +32,81 @@ header {
 }
 
 .logo {
-    color: white;
+    margin-top: 50px;
+}
+
+.burger {
+    width: 50px;
+    height: 50px;
+    background-color: #888;
+    position: absolute;
+    right: 40px;
+    top: -10px;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: .25s;
+}
+
+
+
+.burg-line {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    transition: .25s transform;
+}
+
+.burger:hover {
+    background-color: #444;
 }
 
 #nav-header {
     position: absolute;
-    top: -10px;
+    top: 10px;
     right: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 50%;
     height: 60px;
     align-items: center;
+    transition: .25s;
+    animation: anim 0.5s ease forwards;
+}
+
+@keyframes anim {
+    from {
+        top: 50px;
+        right: 1000px;
+    }
+    to {
+        top: 50px;
+        right: 0;
+    }
+}
+
+.anim {
+    animation: anim-reverse 0.5s ease forwards !important;
+}
+
+@keyframes anim-reverse {
+    from {
+        top: 50px;
+        right: 0;
+    }
+    to {
+        top: 50px;
+        right: -1000px;
+    }
 }
 
 .nav-el {
     color: white;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1em;
     line-height: 27px;
     text-align: center;
     transition: .1s ease;
@@ -65,6 +123,7 @@ header {
     gap: 50px;
     align-items: center;
     position: relative;
+    margin-top: 50px;
 }
 
 .main-img {
@@ -93,7 +152,7 @@ header {
 .slogan {
     color: white;
     font-weight: 400;
-    font-size: calc(2.5vw + 2.5vh);
+    font-size: 3em;
     line-height: 88px;
     letter-spacing: 3.2px;
     margin: 0 !important;
@@ -132,7 +191,7 @@ header {
 
 .header {
     font-weight: 400;
-    font-size: calc(2.5vw + 2.5vh);
+    font-size: 2em;
     line-height: 79px;
     letter-spacing: 2.88px;
     color: white;
@@ -169,7 +228,7 @@ header {
 }
 
 .ep {
-    width: 85%;
+    padding-right: 120px;
 }
 
 .ep-topic {
@@ -196,17 +255,16 @@ header {
 .ep-header {
     color: white;
     font-weight: 400;
-    font-size: calc(2.5vw + 2.5vh);
-    line-height: calc(2.5vw + 2.5vh);
+    font-size: 2em;
     margin-top: 20px;
 }
 
 .ep-detail {
-    font-size: 22px;
+    font-size: 0.8em;
     font-weight: 400;
     line-height: 33px;
     color: var(--whitish-text);
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .ep-button {
@@ -245,12 +303,12 @@ header {
 }
 
 .name {
-    font-size: calc(3vw + 2.5vh);
+    font-size: 2em;
     letter-spacing: 2.88px;
 }
 
 .bio {
-    font-size: 24px;
+    font-size: 0.9em;
     line-height: 33px;
     color: var(--whitish-text);
     margin-top: 30px;
@@ -269,7 +327,7 @@ header {
 }
 
 .subs-text {
-    font-size: calc(3vw + 2.5vh);
+    font-size: 2em;
     line-height: 79px;
     letter-spacing: 2.88px;
 }
@@ -307,7 +365,7 @@ input {
 
 .reviews {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: minmax(200px, 400px);
     gap: 16px;
     justify-items: center;
@@ -318,18 +376,19 @@ input {
     background-color: black;
     border-radius: 32px;
     padding: 50px;
+    width: 100%;
     box-sizing: border-box;
 }
 
 .rev-text {
-    font-size: 36px;
+    font-size: 1.5em;
     line-height: 43px;
     margin-top: 20px;
 }
 
 .rev-author {
     margin-top: 20px;
-    font-size: 24px;
+    font-size: 1em;
     line-height: 29px;
     color: var(--whitish-text);
 }
@@ -363,9 +422,17 @@ footer {
         display: block;
     }
 
+    .container {
+        font-size: 18px;
+    }
+
+    .burger {
+        display: grid;
+    }
+
     #nav-header {
-        position: static;
         width: 100%;
+        display: none;
     }
 
     .header {
@@ -416,6 +483,10 @@ footer {
         margin-top: 10px;
     }
 
+    .reviews {
+        grid-template-columns: 1fr 1fr;
+    }
+
     input {
         width: 50%;
     }
@@ -424,7 +495,30 @@ footer {
         margin-bottom: 10px;
     }
 
-    .services-bottom {
+    .services-bottom, .services-top {
         margin: 0 auto;
+        width: fit-content;
+    }
+
+    .services-top {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 800px) {
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 2100px) {
+    .container {
+        padding: 70px 20%;
+    }
+}
+
+@media (min-width: 1100px) {
+    #nav-header {
+        display: grid !important;
     }
 }

@@ -17,6 +17,33 @@ p {
     overflow-x: hidden;
 }
 
+.burger {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0,0,100);
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    place-items: center;
+    padding: 8px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: .25s;
+}
+
+.burg-line {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    transition: .25s transform;
+}
+
+.burger:hover {
+    background-color: darkblue;
+}
+
 input, input::placeholder, textarea, textarea::placeholder, button {
     font-family: 'Roboto';
 }
@@ -35,12 +62,11 @@ header .logo {
     position: absolute;
     right: var(--padding);
     top: 50px;
-    width: 30%;
+    width: 35%;
     display: grid;
     gap: 5%;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(5, minmax(50px, 1fr) 100px);
+    place-items: center;
 }
 
 .hn {
@@ -119,13 +145,13 @@ header .logo {
 
 .feat-container {
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 10%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     place-items: center;
-    gap: 10%;
     width: calc(70% - 50px);
+    gap: 40px 0;
 }
 
 .feat {
@@ -444,7 +470,7 @@ header .logo {
 
 .res-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     gap: 15%;
     margin-top: 75px;
 }
@@ -541,7 +567,7 @@ header .logo {
 .kick-3 {
     margin-top: 75px;
     display: grid;
-    grid-template-columns: repeat(7,70%);
+    grid-template-columns: repeat(7,500px);
     gap: 50px;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -644,7 +670,7 @@ footer .logo {
     right: var(--padding);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     html,body {
         --padding: 5%;
     }
@@ -656,9 +682,55 @@ footer .logo {
         right: 0;
     }
 
+    .burger {
+        display: grid;
+    }
+
     .header-nav {
+        gap: 0;
         width: 100%;
         top: 100px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        display: none;
+        background-color: rgba(0,0,100, 0.5);
+        border-radius: 50px;
+        backdrop-filter: blur(10px);
+        padding-top: 50px;
+        animation: 0.5s anim ease forwards;
+    }
+
+    @keyframes anim {
+        from {
+            top: -1000px;
+            right: 0;
+        }
+        to {
+            top: 100px;
+            right: 0;
+        }
+    }
+
+    .anim {
+        animation: anim-reverse 0.5s ease forwards;
+    }
+
+    @keyframes anim-reverse {
+        from {
+            top: 100px;
+            right: 0;
+        }
+        to {
+            top: -1000px;
+            right: 0;
+        }
+    }
+
+    .hn {
+        font-size: 32px;
+        margin:0 0 50px 0;
     }
 
     .sl-2 {
@@ -670,12 +742,15 @@ footer .logo {
         width: 90%;
         text-align: center;
         box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .feat-container {
         position: static;
         width: 100%;
         margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .where-now {
@@ -687,11 +762,22 @@ footer .logo {
     }
 
     .f-1, .f-2 {
-        width: 100%;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .f-1 {
+        margin-top: -50px;
+    }
+
+    .f-2 {
+        margin-top: 25px;
     }
 
     .res-container {
         gap: 0;
+        grid-template-columns: 1fr;
     }
 
     .stages {
@@ -736,6 +822,10 @@ footer .logo {
     .question {
         padding-right: 45px;
     }
+    
+    .ftr-column:nth-of-type(2) {
+        display: none;
+    }
 
     .social {
         bottom: 80px;
@@ -748,5 +838,17 @@ footer .logo {
 
     .ftr-column:nth-of-type(2) {
         display: none;
+    }
+}
+
+@media (min-width: 2200px) {
+    .kick-3 {
+        grid-template-columns: repeat(7, 800px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .header-nav {
+        display: grid !important;
     }
 }
