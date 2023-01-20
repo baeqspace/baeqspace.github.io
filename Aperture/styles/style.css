@@ -15,6 +15,7 @@ header {
     display: grid;
     grid-template-columns: 30% 70%;
     place-items: center;
+    position: relative;
 }
 
 p {
@@ -35,8 +36,8 @@ p {
     height: 50px;
     background-color: #222;
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 25px;
+    top: 35px;
     display: none;
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
@@ -407,7 +408,7 @@ footer {
     margin-left: 20px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     html, body {
         --padding: 1%;
     }
@@ -421,6 +422,7 @@ footer {
         backdrop-filter: blur(5px);
         border-radius: 30px;
         padding: 10px 0 50px;
+        display: none;
         position: absolute;
         right: 0;
         top: 200px;
@@ -475,8 +477,15 @@ footer {
         width: fit-content;
     }
 
+    .past-imgs {
+        padding: 0;
+    }
+
     .photo-settings {
         transform: scale(0.75);
+        left: 0;
+        right: 0;
+        margin: auto;
     }
 
     .tools-desc {
@@ -495,6 +504,10 @@ footer {
 
     .hn {
         margin-left: 10px;
+    }
+
+    footer {
+        padding: 0 10px;
     }
 
     .fn-container {

@@ -40,7 +40,7 @@ header {
     height: 50px;
     background-color: #888;
     position: absolute;
-    right: 40px;
+    right: 20px;
     top: -10px;
     display: none;
     grid-template-rows: 1fr 1fr 1fr;

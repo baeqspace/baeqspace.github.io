@@ -45,7 +45,7 @@ header {
     height: 50px;
     background-color: rgb(171, 130, 175);
     position: absolute;
-    right: 50px;
+    right: 25px;
     top: 50px;
     display: none;
     grid-template-rows: 1fr 1fr 1fr;
@@ -559,7 +559,7 @@ footer label::before {
     .header-nav {
         display: none;
         top: 100px;
-        width: 500px;
+        width: 80%;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         left: 0;
@@ -579,11 +579,16 @@ footer label::before {
 
     .just-ride {
         grid-template-columns: 1fr;
+        gap: 50px;
     }
 
     .just-img {
         width: 100%;
         grid-row: 1;
+    }
+
+    .members {
+        padding-bottom: 100px;
     }
 
     .member {
@@ -613,6 +618,10 @@ footer label::before {
     .check {
         font-size: 18px;
     }
+
+    .your-city {
+        padding: 0 0 50px 0;
+    }
     
     .your-cities {
         text-align: center;
@@ -630,6 +639,19 @@ footer label::before {
 
     footer {
         grid-template-columns: 1fr;
+        padding: 5%;
+    }
+
+    .services {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 25px auto;
+        gap: 25px;
+    }
+
+    .services img {
+        width: 50px;
     }
 
     .yc-main {
