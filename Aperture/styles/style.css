@@ -37,7 +37,6 @@ p {
     background-color: #222;
     position: absolute;
     right: 25px;
-    top: 35px;
     display: none;
     grid-template-rows: 1fr 1fr 1fr;
     place-items: center;
@@ -413,9 +412,6 @@ footer {
         --padding: 1%;
     }
 
-    .logo {
-        margin-top: 25px;
-    }
     .header-nav {
         font-size: 2.5em;
         background-color: rgba(200,200,200,0.5);
@@ -499,7 +495,6 @@ footer {
 
     header {
         grid-template-columns: 1fr;
-        margin-top: 30px;
     }
 
     .hn {

@@ -59,7 +59,7 @@ p {
 
 .header-cont {
     display: grid;
-    grid-template-columns: 150px 150px repeat(4, 1fr) 200px;
+    grid-template-columns: 150px 130px repeat(4, 1fr) 200px;
     text-align: center;
     width: 80%;
     place-items: center;
@@ -101,6 +101,41 @@ p {
     height: 40px;
     margin-left: 10px;
     display: inline-block;
+    position: relative;
+}
+
+.head-button:nth-of-type(1) {
+    background: url('assets/поиск.svg')
+}
+
+.head-button:nth-of-type(2) {
+    background: url('assets/избранное-2.svg')
+}
+
+.head-button:nth-of-type(2)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background: url('assets/кол-во\ товара-1.svg');
+    width: 18px;
+    height: 18px;
+}
+
+.head-button:nth-of-type(3)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    background: url('assets/кол-во\ товара.svg');
+    width: 18px;
+    height: 18px;
+}
+
+.head-button:nth-of-type(3) {
+    background: url('assets/корзина-2.svg')
 }
 
 main {
@@ -118,6 +153,101 @@ main {
 .banner {
     height: 440px;
     background: grey;
+}
+
+.banner:first-of-type {
+    background: url('assets/Ellipse-4.svg'), url('assets/image-8.svg'), linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%), #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    border-radius: 10px;
+    padding: 80px 57px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position-x: right, 0, 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+}
+
+.b1-1 {
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: white;
+}
+
+.b1-2 {
+    margin-top: 18px;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+}
+
+.b1-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+    border: 0;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.banner:nth-of-type(2) {
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    background: url('assets/Ellipse-3.svg'), url('assets/Ellipse-2.svg'), #1A0B73;
+    background-repeat: no-repeat;
+    background-position: top left, right bottom, 0;
+}
+
+.b2-1 {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: white;
+}
+
+.b2-2 {
+    display: inline;
+    font-weight: 700;
+    font-size: 3em;
+    color: white;
+}
+
+.b2-3 {
+    display: inline;
+    font-weight: 600;
+    font-size: 1em;
+    position: absolute;
+    top: 140px;
+    left: 200px;
+    color: white;
+}
+
+.b2-button {
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 70px;
+    font-size: 0.9em;
+    font-weight: 700;
+}
+
+.b2-button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 31px;
+    height: 12px;
+    background: url('assets/Arrow.svg');
+    top: 4px;
+    right: -40px;
+}
+
+.banner:nth-of-type(2) img {
+    position: absolute;
+    bottom: 25px;
+    left: 5px;
 }
 
 .categ {
@@ -141,7 +271,22 @@ main {
 }
 
 .cat {
-    background-color: grey;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    background: url('assets/Ellipse\ \(1\).svg');
+    background-repeat: no-repeat;
+}
+
+.cat-name {
+    font-size: 1em;
+    font-weight: 600;
+    color: #303239;
+}
+
+.cat-catalog {
+    margin-top: 60px;
 }
 
 .advantages {
@@ -150,8 +295,11 @@ main {
     grid-template-columns: 30% repeat(3, 1fr);
     grid-template-rows: 120px 120px;
     box-sizing: border-box;
-    background: radial-gradient(98.19% 130.91% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
+    background: url('assets/Ellipse-1.svg'), url('assets/bg.svg'), radial-gradient(98.19% 130.91% at -8.58% -1.44%, #42E8E0 0%, #40DDDA 1.57%, #3AAEC0 9.21%, #3484A9 17.3%, #2F6195 25.73%, #2B4486 34.58%, #282E79 44%, #180564 82.26%);
     box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    background-repeat: no-repeat;
+    background-position-x: right, 0, 0;
+    background-position-y: bottom, 0, 0;
     border-radius: 10px;
     gap: 40px;
     height: 380px;
@@ -170,6 +318,8 @@ main {
     grid-row: 1 / 3;
     background: url('assets/svg-6.svg');
     background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -20px;
 }
 
 .adv {
@@ -200,7 +350,101 @@ main {
 
 .hit {
     height: 360px;
-    background-color: grey;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+}
+
+.hit-categ div {
+    font-size: 0.9em;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    background: linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%), #FFFFFF;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    width: fit-content;
+}
+
+.hit-categ {
+    margin: -5px 0 0 -5px;
+    padding: 3px 10px;
+    background-color: #F0F5FB;
+    width: fit-content;
+    border-radius: 4px;
+}
+
+.hit-favor {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.hit-img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin: 10px auto;
+}
+
+.hit-avail {
+    font-size: 0.7em;
+    color: #9B9B9B;
+    font-weight: 600;
+    margin-top: 6px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.hit-avail::before {
+    display: block;
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    border-radius: 5px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #38B0C1;
+}
+
+.hit-model {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #303239;
+}
+
+.hit-price {
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-top: 8px;
+    display: inline;
+}
+
+.hit-past-price {
+    display: inline;
+    text-decoration: line-through;
+    font-size: 0.6em;
+    color: #9B9B9B;
+}
+
+.hit-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 100px;
+}
+
+.hit-buy {
+    width: 100%;
+    height: 45px;
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient(73.56deg, #0D748B -10.13%, #1A0B73 75.49%), #FFFFFF;
+    color: white;
+    font-size: 0.8em;
+    margin: 20px auto 0;
 }
 
 .about-1 {
@@ -239,7 +483,9 @@ main {
 
 .form {
     margin-top: 80px;
-    background: url('./assets/bg\ image.svg');
+    background: url('./assets/Ellipse.svg'), url('./assets/bg\ image.svg');
+    background-position-y: bottom;
+    background-repeat: no-repeat;
     padding: 50px 60px;
     color: white;
 }
@@ -343,6 +589,8 @@ main {
     height: 360px;
     position: relative;
     background: url('assets/map.svg');
+    filter: drop-shadow(0px 4px 20px rgba(0, 7, 94, 0.1));
+    background-repeat: no-repeat;
 }
 
 .where-img::after {
