@@ -82,9 +82,9 @@ p {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     justify-self: start;
-    z-index: 2;
+    z-index: 3;
     position: relative;
-    top: 20px
+    top: 20px;
 }
 
 .link {
@@ -358,8 +358,10 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
-    background: url('assets/Ellipse\ \(1\).svg');
+    background: url('assets/Ellipse\ \(1\).svg'), white;
     background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
 }
 
 .cat-name {
@@ -370,6 +372,19 @@ main {
 
 .cat-catalog {
     margin-top: 60px;
+    position: relative;
+}
+
+.cat-catalog::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 25px;
+    width: 30px;
+    height: 10px;
+    background: url('assets/arrow-2.svg');
+    background-position: center;
 }
 
 .advantages {
@@ -683,7 +698,7 @@ main {
 }
 
 .where-img {
-    height: 360px;
+    min-height: 360px;
     width: 100%;
     position: relative;
     background: url('assets/mapa-1.svg');
@@ -820,6 +835,10 @@ footer .form-submit {
     .where-img, .where-cont {
         justify-self: center;
     }
+
+    .where-img {
+        background-position: center;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -835,6 +854,10 @@ footer .form-submit {
 
     .head-buttons {
         margin-top: -10px;
+        z-index: 3;
+        position: relative;
+        right: unset;
+        top: unset;
     }
 
     .header-cont {
@@ -896,11 +919,19 @@ footer .form-submit {
         margin-top: 20px;
     }
 
+    .contacts-2 p {
+        margin-left: 10px;
+    }
+
     .socials-2 {
         display: block;
         position: absolute;
         right: 10px;
         bottom: 45px;
+    }
+
+    .socials-2 img {
+        margin-left: 10px;
     }
 
     .req-call {
@@ -931,10 +962,6 @@ footer .form-submit {
 }
 
 @media (max-width: 900px) {
-    body {
-        font-size: 14px;
-    }
-
     .banner .pagination {
         margin: 0 auto;
         right: 0;
@@ -992,15 +1019,15 @@ footer .form-submit {
     }
 
     .burger {
-        top: 7px;
-        right: 30px;
+        top: 10px;
+        right: var(--pad);
     }
 
     .head-buttons {
         margin: 0;
         position: absolute;
-        right: 85px;
-        top: 7px;
+        right: 75px;
+        top: 10px;
     }
 
     .banner:first-of-type {
@@ -1017,10 +1044,6 @@ footer .form-submit {
         grid-template-columns: 1fr !important;
     }
 
-    .advantages {
-        gap: 0;
-    }
-
     .about-img {
         width: 90%;
     }
@@ -1028,14 +1051,18 @@ footer .form-submit {
     .where-img {
         background: url('assets/mapa-2.svg');
         background-repeat: no-repeat;
+        background-size: 500px;
+        background-position: center;
         justify-self: center;
-        width: 70%;
+        width: 100%;
+        height: 500px;
     }
 }
 
 @media (max-width: 500px) {
     body {
         --padding: 0 5%;
+        --pad: 5%;
     }
 
     .banner:first-of-type {
