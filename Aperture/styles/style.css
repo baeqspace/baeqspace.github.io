@@ -139,7 +139,7 @@ p {
 .areas-grid {
     margin-top: 42px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     place-items: center;
     gap: 16px;
     padding: 0 var(--padding) 0 var(--padding);
@@ -389,8 +389,7 @@ footer {
     border-radius: 11px;
     position: absolute;
     right: 6px;
-    bottom: 30px;
-    bottom: 48px;
+    bottom: 33px;
 }
 
 .licensing {

@@ -1,0 +1,96 @@
+.Cart {
+    width: 300px;
+    height: 500px;
+    background-color: rgba(50,50,50,0.75);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    position: fixed;
+    top: 200px;
+    right: 40px;
+    z-index: 4;
+    animation: anima .25s ease forwards;
+    color: white;
+    padding: 20px;
+    transition: .25s;
+}
+
+.CartMode {
+    width: 500px;
+    height: 300px;
+    bottom: 20px;
+    top: unset;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.CartMode > .Cart-order, .CartMode + .cart-button {
+    display: none;
+}
+
+.Cart-Active {
+    display: block;
+    animation: anim .25s ease;
+}
+
+.Cart-Active + .cart-button {
+    position: fixed;
+    border: 1px solid black;
+    top: 180px;
+    right: 90px;
+}
+
+@keyframes anim {
+    from {width: 0; height: 0}
+    to {width: 300px; height: 500px}
+}
+
+@keyframes anima {
+    from {opacity: 1}
+    to {opacity: 0;display: none;pointer-events:none;}
+}
+
+.Cart-header {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Cart-container {
+    overflow-y: auto;
+    height: 60%;
+    margin-top: 10px;
+}
+
+.Cart-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.Cart-container::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 25px;
+}
+
+.Cart-total {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.Cart-order {
+    font-size: 18px;
+    display: block;
+    margin: 10px auto 0;
+    width: 150px;
+    height: 40px;
+    border: 0;
+    border-radius: 5px;
+    background-color: green;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.Cart-order:hover {
+    background-color: lime;
+    color: white;
+    width: 200px;
+}

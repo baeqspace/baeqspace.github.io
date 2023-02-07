@@ -1,0 +1,30 @@
+.App {
+  width: 100%;
+  background-color: #555;
+  border-radius: 100px;
+  font-size: 24px;
+  padding: 50px 10%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.greet-1 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+}
+
+.greet-2 {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.arts-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px 70px;
+  margin-top: 50px;
+}

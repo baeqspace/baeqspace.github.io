@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    display: block;
+    color: white;
+}
+
+.article {
+    height: 300px;
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 24px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.article::after {
+    display: block;
+    content: "Читать далее...";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 28px;
+    background-color: lightgrey;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: .1s ease;
+}
+
+.article:hover::after {
+    height: 100px;
+}
