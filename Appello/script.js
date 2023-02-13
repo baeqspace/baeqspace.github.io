@@ -52,3 +52,40 @@ burger.onclick = () => {
         nav.style.display = 'grid'
     }
 }
+
+let questions = document.querySelectorAll('.question')
+
+const handleClick = (q)=>{
+    q.onclick = ()=>{
+        let text = q.querySelector('.q-ans')
+        let cross = q.querySelector('.cross')
+        text.classList.remove('hidden')
+        cross.style.transform = 'rotate(45deg)'
+        q.onclick = ()=>{
+            text.classList.add('hidden')
+            cross.style.transform = ''
+            handleClick(q)
+        }
+    }
+}
+
+for (let q of questions) {
+    handleClick(q)
+}
+
+let stages = document.querySelectorAll('.stage')
+let steps = document.querySelectorAll('.steps')
+
+for (let stage of stages) {
+    stage.onclick = ()=>{
+        let selected = document.querySelector('.selected')
+        selected.classList.remove('selected')
+        stage.classList.add('selected')
+        for (let step of steps) {
+            step.classList.add('hidden-step')
+            if (step.dataset.step === stage.dataset.step) {
+                step.classList.remove('hidden-step')
+            }
+        }
+    }
+}

@@ -49,6 +49,7 @@ header {
     box-sizing: border-box;
     border-radius: 10px;
     transition: .25s;
+    cursor: pointer;
 }
 
 .burg-line {
@@ -180,6 +181,12 @@ header {
     height: 40px;
     display: inline-block;
     margin-right: 17px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.serv:hover {
+    transform: scale(1.1)
 }
 
 .episodes {
@@ -207,6 +214,12 @@ header {
     color: white;
     font-size: 17px;
     line-height: 27px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+#view-all:hover {
+    background-color: cyan;
 }
 
 .episode {
@@ -275,6 +288,12 @@ header {
     margin-top: 20px;
     font-size: 18px;
     line-height: 27px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.ep-button:hover {
+    background-color: cyan;
 }
 
 .host {
@@ -359,6 +378,12 @@ input {
     width: 90px;
     height: 50px;
     display: block;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.subs-button:hover {
+    background-color: cyan;
 }
 
 .reviews {
@@ -396,6 +421,10 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
+}
+
+.social img {
+    cursor: pointer;
 }
 
 .services-bottom {

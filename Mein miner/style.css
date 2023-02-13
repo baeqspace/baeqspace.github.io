@@ -49,6 +49,7 @@ p {
     width: 25px;
     display: inline-block;
     height: 25px;
+    cursor: pointer;
 }
 
 .header-2 {
@@ -59,7 +60,7 @@ p {
 
 .header-cont {
     display: grid;
-    grid-template-columns: 150px 130px repeat(4, 1fr) 200px;
+    grid-template-columns: 15% 10% 15% 10% 10% 20%;
     text-align: center;
     width: 80%;
     min-width: 900px;
@@ -85,10 +86,13 @@ p {
     z-index: 3;
     position: relative;
     top: 20px;
+    width: fit-content;
+    cursor: pointer;
 }
 
 .link {
     font-size: 0.9em;
+    cursor: pointer;
 }
 
 .req-call {
@@ -97,6 +101,14 @@ p {
     width: 160px;
     height: 40px;
     color: white;
+    cursor: pointer;
+    background-size: 200%;
+    transition: .25s;
+}
+
+.req-call:hover {
+    background-position-x: -50px;
+    transform: scale(1.1);
 }
 
 .head-buttons {
@@ -111,6 +123,7 @@ p {
     margin-left: 10px;
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
 .head-button:nth-of-type(1) {
@@ -209,7 +222,6 @@ main {
     min-height: 440px;
     background: grey;
     border-radius: 10px;
-    position: relative;
 }
 
 .banner:first-of-type {
@@ -219,13 +231,24 @@ main {
     box-sizing: border-box;
     background-repeat: no-repeat;
     background-position-x: right, 0, 0;
+    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    display: grid;
+    grid-template-columns: repeat(4, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 100px;
+}
+
+.bnr {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
 }
 
 .b-1 ~ img {
-    width: 70%;
     place-self: center;
 }
 
@@ -250,12 +273,12 @@ main {
     border: 0;
     background-color: white;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .banner .pagination {
-    bottom: 30px;
-    right: 30px;
     position: absolute;
+    top: 200px;
 }
 
 .pag {
@@ -264,7 +287,8 @@ main {
     width: 10px;
     height: 10px;
     border-radius: 10px;
-    background: rgba(56, 176, 193, 0.4)
+    background: rgba(56, 176, 193, 0.4);
+    cursor: pointer;
 }
 
 .chosen {
@@ -362,6 +386,7 @@ main {
     background-repeat: no-repeat;
     border-radius: 10px;
     box-shadow: 0px 4px 20px rgba(0, 7, 94, 0.1);
+    cursor: pointer;
 }
 
 .cat-name {
@@ -385,6 +410,11 @@ main {
     height: 10px;
     background: url('assets/arrow-2.svg');
     background-position: center;
+    transition: .25s;
+}
+
+.cat:hover .cat-catalog::after {
+    right: 15px;
 }
 
 .advantages {
@@ -441,11 +471,22 @@ main {
     position: relative;
 }
 
+.hits-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4,100%);
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
 .hits-container {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+    scroll-snap-align: start;
 }
 
 .hits .pagination {
@@ -489,6 +530,7 @@ main {
     position: absolute;
     right: 15px;
     top: 15px;
+    cursor: pointer;
 }
 
 .hit-img {
@@ -496,6 +538,7 @@ main {
     width: 160px;
     height: 160px;
     margin: 10px auto;
+    cursor: pointer;
 }
 
 .hit-avail {
@@ -523,6 +566,10 @@ main {
     font-size: 0.9em;
     font-weight: 600;
     color: #303239;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .hit-price {
@@ -543,6 +590,7 @@ main {
     position: absolute;
     right: 20px;
     bottom: 100px;
+    cursor: pointer;
 }
 
 .hit-buy {
@@ -554,6 +602,7 @@ main {
     color: white;
     font-size: 0.8em;
     margin: 20px auto 0;
+    cursor: pointer;
 }
 
 
@@ -636,6 +685,7 @@ main {
     color: black;
     background-color: white;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 #check {
@@ -660,6 +710,7 @@ main {
     height: 40px;
     margin-right: 20px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .info:first-of-type {
@@ -705,6 +756,7 @@ main {
     background-position: center;
     filter: drop-shadow(0px 4px 20px rgba(0, 7, 94, 0.1));
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 footer {
@@ -743,6 +795,7 @@ footer {
 .ftr {
     margin-bottom: 8px;
     font-size: 0.8em;
+    cursor: pointer;
 }
 
 .darken {
@@ -757,6 +810,10 @@ footer {
 footer .form-submit {
     position: absolute;
     right: var(--pad);
+}
+
+.ft-4 p {
+    cursor: pointer;
 }
 
 @media (max-width: 1350px) {

@@ -51,11 +51,11 @@
                 <p class="w-1">Where are you now?</p>
                 <p class="w-2">Use the tabs below to identify what stage you're at so we can help you to move on to the next phase of your project.</p>
                 <div class="stages">
-                    <div class="stage selected">Design</div>
-                    <div class="stage">Develop</div>
-                    <div class="stage">Launch</div>
+                    <div class="stage selected" data-step="1">Design</div>
+                    <div class="stage" data-step="2">Develop</div>
+                    <div class="stage" data-step="3">Launch</div>
                 </div>
-                <div class="steps">
+                <div class="steps" data-step="1">
                     <div class="step">
                         <p class="step-header">1. Research</p>
                         <p class="step-desc">We can help you to better understand your target audience, enabling you to create a more powerful value proposition for your business.</p>
@@ -71,6 +71,42 @@
                     <div class="step">
                         <p class="step-header">4. Prototyping</p>
                         <p class="step-desc">We can provide you with a clickable prototype so you can test and play with your product; allowing you to get a better feel for the user experience.</p>
+                    </div>
+                </div>
+                <div class="steps hidden-step" data-step="2">
+                    <div class="step">
+                        <p class="step-header">1. lorem</p>
+                        <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut distinctio cupiditate eius, deserunt tempore quo mollitia incidunt</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">2. ipsum</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel impedit inventore quod, quisquam, earum quasi autem voluptatem deserunt amet</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">3. dolor</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel similique maxime repellendus placeat rerum quam quibusdam</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">4. sit</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam saepe ad maxime accusamus, corporis suscipit. Beatae fuga</p>
+                    </div>
+                </div>
+                <div class="steps hidden-step" data-step="3">
+                    <div class="step">
+                        <p class="step-header">1. lorem</p>
+                        <p class="step-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut distinctio cupiditate eius, deserunt tempore quo mollitia incidunt</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">2. ipsum</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel impedit inventore quod, quisquam, earum quasi autem voluptatem deserunt amet</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">3. dolor</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vel similique maxime repellendus placeat rerum quam quibusdam</p>
+                    </div>
+                    <div class="step">
+                        <p class="step-header">4. sit</p>
+                        <p class="step-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam saepe ad maxime accusamus, corporis suscipit. Beatae fuga</p>
                     </div>
                 </div>
                 <button class="blue-button">Contact us</button>
@@ -216,12 +252,30 @@
                 <p class="faq-1">FAQ</p>
                 <p class="faq-2">Below is a list of frequently asked questions. If you can't find what you're looking ofr then feel free to ask us directly via <span class="hl-text">email</span></p>
                 <div class="questions-container">
-                    <div class="question">1. What is your privacy and security policy?</div>
-                    <div class="question">2. How long is the development timeline?</div>
-                    <div class="question">3. What type of companies do you work with?</div>
-                    <div class="question">4. How many team members for a project?</div>
-                    <div class="question">5. What warranties are to ensure deliverables are met?</div>
-                    <div class="question">6. Do your outsource work?</div>
+                    <div class="question">1. What is your privacy and security policy?
+                        <div class="q-ans hidden">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero inventore quidem quod magni quaerat? Ratione dolore mollitia et doloremque numquam, vero sed dignissimos illum nesciunt magnam ea facilis hic quia.</div>
+                        <div class="cross"></div>
+                    </div>
+                    <div class="question">2. How long is the development timeline?
+                        <div class="q-ans hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae fugiat quae facere provident, velit totam dolore beatae quia sed. Et ex in voluptatem magni distinctio eveniet rem aspernatur minus!</div>
+                        <div class="cross"></div>
+                    </div>
+                    <div class="question">3. What type of companies do you work with?
+                        <div class="q-ans hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae fugiat quae facere provident, velit totam dolore beatae quia sed. Et ex in voluptatem magni distinctio eveniet rem aspernatur minus!</div>
+                        <div class="cross"></div>
+                    </div>
+                    <div class="question">4. How many team members for a project?
+                        <div class="q-ans hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae fugiat quae facere provident, velit totam dolore beatae quia sed. Et ex in voluptatem magni distinctio eveniet rem aspernatur minus!</div>
+                        <div class="cross"></div>
+                    </div>
+                    <div class="question">5. What warranties are to ensure deliverables are met?
+                        <div class="q-ans hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae fugiat quae facere provident, velit totam dolore beatae quia sed. Et ex in voluptatem magni distinctio eveniet rem aspernatur minus!</div>
+                        <div class="cross"></div>
+                    </div>
+                    <div class="question">6. Do your outsource work?
+                        <div class="q-ans hidden">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus vitae fugiat quae facere provident, velit totam dolore beatae quia sed. Et ex in voluptatem magni distinctio eveniet rem aspernatur minus!</div>
+                        <div class="cross"></div>
+                    </div>
                 </div>
             </section>
             <section class="kickstart">

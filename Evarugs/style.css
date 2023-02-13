@@ -46,6 +46,7 @@ header {
     font-size: 15px;
     line-height: 16px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .visit {
@@ -55,6 +56,7 @@ header {
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .visit img {
@@ -98,6 +100,12 @@ header {
     line-height: 21px;
     font-weight: 300;
     color: #737373;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.hn:hover {
+    color: black;
 }
 
 .slogan {
@@ -136,6 +144,12 @@ header {
     line-height: 24px;
     color: white;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.order:hover {
+    transform: scale(1.1);
 }
 
 .imgs-back {
@@ -288,7 +302,7 @@ header {
 
 .dot:hover {
     cursor: pointer;
-    background-color: darkgrey;
+    background-color: #74445c;
 }
 
 .review {
@@ -369,6 +383,10 @@ footer {
 .footer-desc {
     font-size: 14px;
     margin-bottom: 70px;
+}
+
+.footer-el img {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {

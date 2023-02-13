@@ -31,6 +31,7 @@ p {
     box-sizing: border-box;
     border-radius: 10px;
     transition: .25s;
+    cursor: pointer;
 }
 
 .burg-line {
@@ -68,6 +69,7 @@ header .logo {
 .hn {
     font-size: 13px;
     margin-left: 5%;
+    cursor: pointer;
 }
 
 .hn-primary {
@@ -110,6 +112,11 @@ header .logo {
     color: white;
     font-size: 15px;
     display: block;
+    cursor: pointer;
+}
+
+.blue-button:hover {
+    background-color: cyan;
 }
 
 .slogan .blue-button {
@@ -154,7 +161,7 @@ header .logo {
     font-size: 14px;
     line-height: 30px;
     color: #737373;
-    width: 35%;
+    width: 50%;
 }
 
 .feat:nth-of-type(4), .feat:nth-of-type(5), .feat:nth-of-type(6) {
@@ -187,6 +194,12 @@ header .logo {
 
 .stage {
     font-size: 23px;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.stage:hover {
+    color: #0A8BFE;
 }
 
 .selected {
@@ -198,6 +211,10 @@ header .logo {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-top: 50px;
+}
+
+.hidden-step {
+    display: none;
 }
 
 .step {
@@ -467,7 +484,7 @@ header .logo {
 .res-container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 15%;
+    gap: 5%;
     margin-top: 75px;
 }
 
@@ -522,13 +539,36 @@ header .logo {
 }
 
 .question {
-    height: 60px;
+    min-height: 60px;
     border-bottom: 1px solid #E8E8E8;
     margin-top: 35px;
     position: relative;
+    cursor: pointer;
+    transition: .25s;
 }
 
-.question::after {
+.q-ans {
+    margin-top: 30px;
+    padding-left: 20px;
+    overflow: hidden;
+    animation: ans .25s;
+}
+
+.hidden {
+    animation: ans-r .25s forwards;
+}
+
+@keyframes ans {
+    from {height: 0}
+    to {height: 57px}
+}
+
+@keyframes ans-r {
+    from {height: 57px}
+    to {height: 0}
+}
+
+.cross {
     display: block;
     content: "";
     width: 30px;
@@ -537,6 +577,7 @@ header .logo {
     position: absolute;
     right: 0;
     top: 0;
+    transition: .25s;
 }
 
 .question:nth-of-type(1) {
@@ -651,19 +692,23 @@ footer .logo {
 .social {
     position: absolute;
     bottom: 30px;
-    left: calc(50% - 350px / 2);
-    width: 350px;
+    left: 15px;
+    right: 0;
+    margin: 0 auto;
+    width: 33%;
 }
 
 .soc {
     display: inline;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .ftr-3 {
     position: absolute;
     bottom: 30px;
     right: var(--padding);
+    cursor: pointer;
 }
 
 @media (max-width: 1000px) {

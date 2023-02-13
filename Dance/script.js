@@ -22,3 +22,23 @@ burger.onclick = () => {
         nav.style.display = 'grid'
     }
 }
+
+let questions = document.querySelectorAll('.q')
+
+const handleClick = (q)=>{
+    q.onclick = ()=>{
+        let text = q.querySelector('.q-ans')
+        let cross = q.querySelector('.cross')
+        text.classList.remove('hidden')
+        cross.style.transform = 'rotate(45deg)'
+        q.onclick = ()=>{
+            text.classList.add('hidden')
+            cross.style.transform = ''
+            handleClick(q)
+        }
+    }
+}
+
+for (let q of questions) {
+    handleClick(q)
+}

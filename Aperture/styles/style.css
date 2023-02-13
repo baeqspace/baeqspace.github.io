@@ -44,6 +44,7 @@ p {
     box-sizing: border-box;
     border-radius: 10px;
     transition: .25s;
+    cursor: pointer;
 }
 
 .burg-line {
@@ -57,6 +58,10 @@ p {
     background-color: #444;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .header-nav {
     display: block;
     z-index: 2;
@@ -67,6 +72,7 @@ p {
     margin-left: 32px;
     font-size: 0.5em;
     line-height: 20px;
+    cursor: pointer;
 }
 
 .hn:last-of-type {
@@ -150,6 +156,7 @@ p {
     height: 600px;
     background-size: cover;
     position: relative;
+    cursor: pointer;
 }
 
 .area:nth-of-type(1) {
@@ -194,6 +201,12 @@ p {
     letter-spacing: 0.4px;
     border-radius: 14px;
     width: fit-content;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.read:hover {
+    transform: scale(1.2);
 }
 
 .read::before {
@@ -343,6 +356,7 @@ footer {
 .fn {
     color: white;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .footer-container {
@@ -375,21 +389,12 @@ footer {
 .input-subs {
     width: 450px;
     height: 50px;
+    font-size: 24px;
+    padding-left: 10px;
     border-radius: 12px;
     position: absolute;
     right: 0;
     bottom: 20px;
-}
-
-.input-label::after {
-    content: "";
-    background-color: black;
-    width: 63px;
-    height: 30px;
-    border-radius: 11px;
-    position: absolute;
-    right: 6px;
-    bottom: 33px;
 }
 
 .licensing {
@@ -404,6 +409,7 @@ footer {
 
 .service {
     margin-left: 20px;
+    cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -525,18 +531,11 @@ footer {
     .input-subs {
         position: static;
         margin-top: 40px;
-        width: 100%;
+        width: 70%;
     }
 
-    .input-label::after {
-        bottom: 50px;
-    }
     .footer-subs {
         height: 200px;
-    }
-
-    .input-label::after {
-        bottom: 15px;
     }
 
     .services {
