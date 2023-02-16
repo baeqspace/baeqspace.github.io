@@ -7,7 +7,13 @@ function ModalOrder ({appear, orderAppear, getData}) {
 
     const handleSubmit = ()=>{
         let [price, cart] = getData()
-        alert('Data sent: ' + name.current.value + ' ' + email.current.value+ ' ' + price + ' ' + cart)
+        let data = {
+            name: name.current.value,
+            email: email.current.value,
+            price: price,
+            cart: cart
+        }
+        fetch('http://localhost:3345/api/clients', {method:'POST', body: JSON.stringify(data),  headers: {'Content-Type': 'application/json'}})
     }
 
     return (

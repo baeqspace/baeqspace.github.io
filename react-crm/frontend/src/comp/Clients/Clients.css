@@ -1,0 +1,15 @@
+.client {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 1px solid grey;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.client:hover {
+    background-color: grey;
+}

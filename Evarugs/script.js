@@ -1,8 +1,8 @@
 let slider = document.querySelector('.reviews-container')
-let maxScroll = slider.scrollWidth - slider.clientWidth - 200
+let maxScroll = slider.scrollWidth - slider.clientWidth - 300
 
 window.onresize = ()=>{
-    maxScroll = slider.scrollWidth - slider.clientWidth - 200
+    maxScroll = slider.scrollWidth - slider.clientWidth - 300
 }
 
 const move = (isRight) => {
@@ -37,7 +37,7 @@ for (let i of sliderElems) {
     dotsCont.append(dot)
     dot.onclick = () => {
         setTimer()
-        let pos = Math.round(maxScroll / sliderElems.length * dot.dataset.count) - 200
+        let pos = Math.round(maxScroll / sliderElems.length * dot.dataset.count) - 300
         slider.scroll(pos, 0)
         console.log(pos)
     }

@@ -1077,7 +1077,7 @@ footer .form-submit {
 
     .burger {
         top: 10px;
-        right: var(--pad);
+        right: 20px;
     }
 
     .head-buttons {
@@ -1088,7 +1088,6 @@ footer .form-submit {
     }
 
     .banner:first-of-type {
-        grid-template-columns: 1fr;
         padding: 40px 40px;
     }
 
