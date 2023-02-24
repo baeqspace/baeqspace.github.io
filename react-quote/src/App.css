@@ -1,0 +1,39 @@
+.App {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+  background-color: antiquewhite;
+  padding: 30px;
+  position: relative;
+}
+
+.Quote {
+  margin-top: 100px;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.Author {
+  margin-top: 20px;
+  font-size: 24px;
+  border-top: 2px solid goldenrod;
+  padding-top: 30px;
+  width: fit-content;
+}
+
+.Get-quote {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+  border: 0;
+  border-radius: 10px;
+  background-color: goldenrod;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.Get-quote:hover {
+  transform: scale(1.1);
+}
