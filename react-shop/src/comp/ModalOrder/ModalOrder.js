@@ -13,6 +13,7 @@ function ModalOrder ({appear, orderAppear, getData}) {
             price: price,
             cart: cart
         }
+        console.log(data)
         fetch('http://localhost:3345/api/clients', {method:'POST', body: JSON.stringify(data),  headers: {'Content-Type': 'application/json'}})
     }
 

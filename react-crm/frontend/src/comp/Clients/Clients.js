@@ -5,7 +5,7 @@ function Clients({clients}) {
         <div className='Clients'>
             <h1>Клиенты</h1>
             {clients.map((c)=>{
-                return <div className='client'>{c.name} {c.email}</div>
+                return <div title={c.cart} className='client'>{c.name} {c.email} {c.prePrice}$</div>
             })}
         </div>
     )

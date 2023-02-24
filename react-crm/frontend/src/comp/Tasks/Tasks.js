@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import './Tasks.css'
 
-function Tasks({clients, changeTasks, tasks}) {
+function Tasks({clients, deleteTask, changeTasks, tasks}) {
     const action = useRef()
     const person = useRef()
     const date = useRef()
@@ -42,7 +42,7 @@ function Tasks({clients, changeTasks, tasks}) {
             <button onClick={handleClick}>Добавить</button>
             <div className='Tasks-container'>
                 {tasks.map((t)=>{
-                    return <div className='task'>{t}</div>
+                    return <div onClick={()=>deleteTask(t)} className='task'>{t}</div>
                 })}
             </div>
         </div>

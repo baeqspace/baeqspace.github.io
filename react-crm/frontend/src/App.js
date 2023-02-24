@@ -42,6 +42,12 @@ function App() {
     setTasks(prev => [...prev, data])
   }
 
+  const deleteTask = (t) => {
+    let newTasks = tasks.filter(el => el !== t)
+    setTasks(newTasks)
+    fetch('/api/deletetask', {method: 'POST', body: t})
+  }
+
   return (
     <div className="App">
       <div className='nav'>
@@ -52,7 +58,7 @@ function App() {
       <div className='main'>
         <Routes>
           <Route path="funnel" element={<Funnel changeClients={changeClients} clients={clients}/>}></Route>
-          <Route path="tasks" element={<Tasks changeTasks={changeTasks} tasks={tasks} clients={clients} />}></Route>
+          <Route path="tasks" element={<Tasks deleteTask={deleteTask} changeTasks={changeTasks} tasks={tasks} clients={clients} />}></Route>
           <Route path='clients' element={<Clients clients={clients}/>}></Route>
         </Routes>
       </div>

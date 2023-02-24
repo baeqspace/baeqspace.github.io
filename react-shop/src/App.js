@@ -42,7 +42,11 @@ function App() {
   }
 
   const getCartAndPrice = () => {
-    return [price, cartList]
+    let cart = []
+    for (let c of cartList) {
+      cart.push(c.title)
+    }
+    return [price, cart]
   }
 
   return (

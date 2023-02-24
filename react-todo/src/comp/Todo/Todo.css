@@ -1,0 +1,20 @@
+.Todo {
+    background-color: grey;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+.Todo:hover {
+    transform: scale(1.05);
+}
+
+.Todo input {
+    margin-right: 5px;
+}
+
+.Todo:has(input:checked) {
+    background-color: green;
+}
