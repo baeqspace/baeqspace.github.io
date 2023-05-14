@@ -20,6 +20,12 @@ body {
     color: whitesmoke;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
 a {
     font-size: 2em;
     color: whitesmoke;
@@ -33,10 +39,10 @@ a {
     height: 10vh;
 }
 
-a:hover {
+a:hover, a:focus {
     background-color: yellowgreen;
     color: black;
-    height: 16vh;
+    transform: scale(1.2);
 }
 
 @media (max-width: 700px) {

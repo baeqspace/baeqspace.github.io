@@ -1,0 +1,26 @@
+.synced {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .temp {
+    font-size: 72px;
+    text-align: center;
+    margin: 50px 0 25px;
+  }
+  
+  .temp-feel {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .condition {
+    margin-top: 100px;
+    text-transform: capitalize;
+    font-size: 24px;
+  }
+  
+  .wind {
+    margin-top: 20px;
+    font-size: 24px;
+  }
