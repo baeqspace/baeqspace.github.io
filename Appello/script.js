@@ -53,7 +53,20 @@ burger.onclick = () => {
     }
 }
 
+
+// new accordion
 let questions = document.querySelectorAll('.question')
+
+for (let q of questions) {
+    q.onclick = () => {
+        q.querySelector('.question-content').classList.toggle('q-opened')
+        q.querySelector('.cross').classList.toggle('cross-rotated')
+    }
+}
+
+
+// old accordion
+/* let questions = document.querySelectorAll('.question')
 
 const handleClick = (q)=>{
     q.onclick = ()=>{
@@ -71,7 +84,7 @@ const handleClick = (q)=>{
 
 for (let q of questions) {
     handleClick(q)
-}
+} */
 
 let stages = document.querySelectorAll('.stage')
 let steps = document.querySelectorAll('.steps')

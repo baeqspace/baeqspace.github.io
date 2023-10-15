@@ -539,33 +539,26 @@ header .logo {
 }
 
 .question {
-    min-height: 60px;
-    border-bottom: 1px solid #E8E8E8;
-    margin-top: 35px;
     position: relative;
+    margin-top: 35px;
     cursor: pointer;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.question-content {
     transition: .25s;
-}
-
-.q-ans {
-    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 0fr;
+    margin-top: 20px;
     padding-left: 20px;
+}
+
+.q-opened {
+    grid-template-rows: 1fr;
+}
+
+.question-content > div {
     overflow: hidden;
-    animation: ans .25s;
-}
-
-.hidden {
-    animation: ans-r .25s forwards;
-}
-
-@keyframes ans {
-    from {height: 0}
-    to {height: 57px}
-}
-
-@keyframes ans-r {
-    from {height: 57px}
-    to {height: 0}
 }
 
 .cross {
@@ -578,6 +571,10 @@ header .logo {
     right: 0;
     top: 0;
     transition: .25s;
+}
+
+.cross-rotated {
+    transform: rotate(45deg);
 }
 
 .question:nth-of-type(1) {
