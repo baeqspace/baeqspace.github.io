@@ -12,7 +12,7 @@ burger.onclick = () => {
         line3.style.transform = ''
         line3.style.width = '35px'
         nav.classList.add('anim')
-        setTimeout(()=>{nav.classList.remove('anim');nav.style.display = 'none'},500)
+        nav.onanimationend = () => {nav.classList.remove('anim');nav.style.display = 'none';nav.onanimationend = ''}
     } else {
         line1.style.transform = 'translateY(12px) rotate(45deg)'
         line1.style.width = '50px'
@@ -25,20 +25,16 @@ burger.onclick = () => {
 
 let questions = document.querySelectorAll('.q')
 
-const handleClick = (q)=>{
+const handleQuestionClick = (q)=>{
     q.onclick = ()=>{
         let text = q.querySelector('.q-ans')
         let cross = q.querySelector('.cross')
-        text.classList.remove('hidden')
-        cross.style.transform = 'rotate(45deg)'
-        q.onclick = ()=>{
-            text.classList.add('hidden')
-            cross.style.transform = ''
-            handleClick(q)
-        }
+        text.classList.toggle('hidden')
+        cross.classList.toggle('cross-rotated')
+        text.toggleAttribute('aria-hidden')
     }
 }
 
 for (let q of questions) {
-    handleClick(q)
+    handleQuestionClick(q)
 }

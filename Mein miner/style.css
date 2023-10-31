@@ -13,6 +13,20 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+button {
+    border: none;
+    background: transparent;
+}
+
 .header-1 {
     height: 45px;
     background: #18154B;
@@ -115,6 +129,7 @@ p {
     position: absolute;
     right: var(--pad);
     top: 15px;
+    display: flex;
 }
 
 .head-button {
@@ -796,6 +811,8 @@ footer {
     margin-bottom: 8px;
     font-size: 0.8em;
     cursor: pointer;
+    color: white;
+    display: block;
 }
 
 .darken {
@@ -805,6 +822,11 @@ footer {
     bottom: 75px;
     right: var(--pad);
     text-align: right;
+}
+
+.darken a {
+    color: inherit;
+    display: block;
 }
 
 footer .form-submit {
@@ -828,7 +850,7 @@ footer .form-submit {
     }
 
     main {
-        padding-top: 100px;
+        padding-top: 20px;
     }
 
     .header-2 {
@@ -844,6 +866,10 @@ footer .form-submit {
     .banners {
         grid-template-columns: 1fr;
         padding-top: 20px;
+    }
+
+    .pagination {
+        top: 300px !important;
     }
 
     .b2-1, .b2-2, .b2-3 {
@@ -937,6 +963,10 @@ footer .form-submit {
         animation: anim 0.5s ease forwards;
         text-align: left;
         z-index: 2;
+    }
+
+    .pagination {
+        top: 200px !important;
     }
 
     .link {
@@ -1033,13 +1063,19 @@ footer .form-submit {
         bottom: 100px;
     }
 
+    .pagination {
+        top: 125px !important;
+        left: 125px !important;
+        right: unset !important;
+    }
+
     .b2-1, .b2-2, .b2-3 {
         text-align: left;
         margin-bottom: 30px;
     }
 
     .b2-1 {
-        font-size: 4em;
+        font-size: 10vw;
         line-height: 1em;
     }
 

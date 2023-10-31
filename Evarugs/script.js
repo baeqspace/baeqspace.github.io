@@ -1,45 +1,56 @@
 let slider = document.querySelector('.reviews-container')
-let maxScroll = slider.scrollWidth - slider.clientWidth - 300
+let maxScroll = slider.scrollWidth - slider.clientWidth
+let sliderElems = slider.querySelectorAll('.review')
+let zone = maxScroll / sliderElems.length
+let dotsCont = document.querySelector('.dots')
 
 window.onresize = ()=>{
-    maxScroll = slider.scrollWidth - slider.clientWidth - 300
+    maxScroll = slider.scrollWidth - slider.clientWidth
+    zone = maxScroll / sliderElems.length
 }
 
-const move = (isRight) => {
-    slider.scrollBy(isRight ? 500 : -300,0)
+const move = () => {
+    console.log(zone)
+    slider.scrollBy(maxScroll / sliderElems.length,0)
 }
+
+
+
+
 
 let interval;
-
 const setInterv = () => {
     interval = setInterval(()=> {
-        slider.scrollLeft >= maxScroll ? slider.scroll(0,0) : move(true)
+        console.log(slider.scrollLeft, calculateScrollPosition(sliderElems.length - 1))
+        slider.scrollLeft >= calculateScrollPosition(sliderElems.length - 1) ? slider.scroll(0,0) : move()
     },2000)
 }
-
 let timer;
-
 const setTimer = () => {
     clearInterval(interval)
     clearTimeout(timer)
     timer = setTimeout(setInterv, 5000)
 }
-
 setInterv()
 
-let sliderElems = slider.querySelectorAll('.review')
-let dotsCont = document.querySelector('.dots')
-let k = 1
-for (let i of sliderElems) {
-    let dot = document.createElement('div')
+
+
+
+function calculateScrollPosition(index) {
+    return Math.round(zone * index + zone / 2)
+}
+
+
+for (let k = 0; k < sliderElems.length; k++) {
+    console.log(k)
+    let dot = document.createElement('button')
     dot.classList.add('dot')
     dot.dataset.count = k
     dotsCont.append(dot)
     dot.onclick = () => {
         setTimer()
-        let pos = Math.round(maxScroll / sliderElems.length * dot.dataset.count) - 300
+        let pos = calculateScrollPosition(dot.dataset.count)
         slider.scroll(pos, 0)
         console.log(pos)
     }
-    k++
 }

@@ -10,12 +10,23 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
 .container {
     font-family: 'Roboto';
     width: 100%;
     height: 100%;
     overflow-x: hidden;
     font-size: 24px;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -32,7 +43,7 @@ header {
 .header-nav {
     position: absolute;
     right: 90px;
-    top: 40px;
+    top: 60px;
     display: grid;
     grid-template-columns: repeat(4,20%) 200px;
     grid-template-rows: 30px;
@@ -55,6 +66,7 @@ header {
     border-radius: 10px;
     transition: .25s;
     cursor: pointer;
+    border: none;
 }
 
 .burg-line {
@@ -243,8 +255,8 @@ header {
     height: 13px;
     content: "";
     position: absolute;
-    left: 125px;
-    top: 25px;
+    left: 170px;
+    top: 30px;
     background-image: url('assets/Vector-1.svg');
     transition: .25s;
 }
@@ -278,14 +290,15 @@ header {
     margin-top: 20px;
     position: relative;
     cursor: pointer;
+    color: black;
+    font-size: 24px;
 }
 
-.details::before {
-    left: 115px;
-    top: 24px;
+.details:hover::before {
+    left: 180px;
 }
 
-.details:hover::before, .just-details:hover::before {
+.just-details:hover::before {
     left: 135px;
 }
 
@@ -296,7 +309,7 @@ header {
 .just-ride {
     padding: 70px var(--padding);
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr 1fr;
     color: #2E2C34;
     background-color: #F5F5F7;
 }
@@ -311,7 +324,7 @@ header {
 }
 
 .just-img {
-    width: 70%;
+    width: 100%;
     max-width: 800px;
     justify-self: center;
 }
@@ -325,6 +338,7 @@ header {
     margin-top: 40px;
     position: relative;
     cursor: pointer;
+    color: black;
 }
 
 .your-city {
@@ -431,10 +445,11 @@ header {
     padding: 11px 55px 11px 44px;
     border: 1px solid #2E2C34;
     width: fit-content;
-    border-radius: 999px;
+    border-radius: 50px;
     margin-top: 55px;
     position: relative;
     cursor: pointer;
+    color: black;
 }
 
 .questions {
@@ -446,6 +461,10 @@ header {
     margin-bottom: 25px;
     width: fit-content;
     cursor: pointer;
+    display: block;
+    border: 0;
+    background: transparent;
+    text-align: start;
 }
 
 .cross {
@@ -460,15 +479,24 @@ header {
     transition: .25s;
 }
 
+.cross-rotated {
+    transform: rotate(45deg);
+}
+
 .q-ans {
     margin-top: 30px;
-    padding-left: 20px;
     overflow: hidden;
-    animation: ans .25s;
+    display: grid;
+    grid-template-rows: 1fr;
+    transition: .25s ease;
+}
+
+.q-ans > div {
+    overflow: hidden;
 }
 
 .hidden {
-    animation: ans-r .25s forwards;
+    grid-template-rows: 0fr;
 }
 
 @keyframes ans {
@@ -733,6 +761,12 @@ footer label::before {
 @media (min-width: 900px) {
     .header-nav {
         display: grid !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .your-city {
+        grid-template-columns: 1fr;
     }
 }
 

@@ -1,3 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -24,6 +39,7 @@ p {
     padding: 70px 15%;
     overflow-x: hidden;
     font-size: 24px;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -109,6 +125,7 @@ header {
     line-height: 27px;
     text-align: center;
     transition: .1s ease;
+    display: block;
 }
 
 .nav-el:hover {

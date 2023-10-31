@@ -31,6 +31,7 @@ let hitsWrapper = document.querySelector('.hits-wrapper')
 
 const paginationModule = (wrapper, pagination, values, scrollValue) => {
     let maxScroll = Math.round(wrapper.scrollWidth - wrapper.clientWidth)
+    window.onresize = () => {maxScroll = Math.round(wrapper.scrollWidth - wrapper.clientWidth)}
 
     let k = 1;
 
@@ -52,7 +53,7 @@ const paginationModule = (wrapper, pagination, values, scrollValue) => {
             }
             currentDotRemove()
             let nextDot = dots[k]
-            console.log(dots)
+            console.log(nextDot)
             nextDot.classList.add('chosen')
             wrapper.scrollBy(scrollValue, 0)
             k += 1

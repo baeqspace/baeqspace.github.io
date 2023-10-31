@@ -13,6 +13,17 @@ body {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+button {
+    border: 0;
+    background: unset;
+}
+
 .sl-2, .am-2, .s-2, .media p, .f2-elem, .foot-3 {
     font-family: 'Montserrat';
 }
@@ -137,6 +148,7 @@ body {
     background: #8C93D1;
     color: white;
     padding: 5px var(--padding);
+    width: 100.5%;
 }
 
 .h-3:not(.h-3:last-of-type) {
@@ -269,6 +281,7 @@ body {
     height: 355px;
     border-radius: 10px;
     box-shadow: 3px 4px 33px rgba(0,0,0,0.15);
+    color: black;
 }
 
 .card-main {
@@ -564,6 +577,7 @@ body {
     position: absolute;
     right: 0;
     transition: .25s;
+    color: black;
 }
 
 .reviews {
@@ -857,7 +871,7 @@ footer .logo p {
     opacity: 0.4;
 }
 
-.f3-2 p {
+.f3-2 a {
     display: inline;
     margin-left: 32px;
 }
