@@ -2,9 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Form from './comp/Form/Form'
 import TodoCont from './comp/TodoCont/TodoCont'
-import {useState, useRef} from 'react'
-import SearchBar from './comp/SearchBar/SearchBar';
-import Select from './comp/Select/Select';
+import {useState} from 'react'
 
 function App() {
   const [todos, setTodos] = useState([])
