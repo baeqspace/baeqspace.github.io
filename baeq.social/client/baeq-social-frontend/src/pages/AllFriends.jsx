@@ -25,7 +25,7 @@ export function AllFriends({ groups }) {
     }
 
     useEffect(() => {
-        if (authUser?.friendsWith?.length && !groups) {
+        if (authUser?.friendsWith && !groups) {
             getFriendsNames()
         }
         if (authUser?.groupsIn && groups) {
