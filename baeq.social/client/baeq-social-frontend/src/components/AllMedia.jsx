@@ -19,7 +19,7 @@ export function AllMedia({type}) {
     async function getMedia() {
         const data = (await api.post('/getAllMedia', {type})).data
         if (data) setMedia((prev) => {
-            if (type === 'videos' || type === 'music') {getMediaNames(data.map(el => el.id)); return [...prev]}    
+            if ((type === 'videos' || type === 'music') && data.length) {getMediaNames(data.map(el => el.id)); return [...prev]}    
             return data
         })
     }
@@ -42,6 +42,7 @@ export function AllMedia({type}) {
     }
 
     useEffect(()=>{
+        if (!media.length) return
         let sorted = [...media]
         if (type === 'photos') {
             setSortedMedia(sorted)
