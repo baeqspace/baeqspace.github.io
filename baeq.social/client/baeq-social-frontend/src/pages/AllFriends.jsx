@@ -25,13 +25,13 @@ export function AllFriends({ groups }) {
     }
 
     useEffect(() => {
-        if (authUser?.friendsWith && !groups) {
+        if (!groups) {
             getFriendsNames()
         }
-        if (authUser?.groupsIn && groups) {
+        if (groups) {
             getGroups()
         }
-    }, [authUser?.friendsWith, pathname])
+    }, [pathname])
 
     useEffect(()=>{
         let sorted = [...friends]
