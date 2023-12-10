@@ -7,8 +7,6 @@ html, body {
 
 body {
     background-color: #222;
-    display: grid;
-    place-items: center;
     font-family: 'Gugi', sans-serif;
 }
 
@@ -20,10 +18,58 @@ body {
     color: whitesmoke;
 }
 
-.container {
+.works-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    width: 60%;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    margin: 15vh auto 0;
+}
+
+.nav-elem {
+    border-radius: 20px;
+    transition: .25s;
+    cursor: pointer;
+    padding: 20px;
+    border: 1px solid yellowgreen;
+}
+
+.nav-elem:hover {
+    background: yellowgreen;
+    color: black;
+}
+
+.hidden {
+    animation: disappear .5s ease forwards;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
+
+.selected {
+    background: yellowgreen;
+    color: black;
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
     column-gap: 50px;
+    margin: 50px auto;
 }
 
 a {
@@ -37,6 +83,16 @@ a {
     place-content: center;
     transition: .25s;
     height: 10vh;
+    animation: appear .5s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
 }
 
 a:hover, a:focus {

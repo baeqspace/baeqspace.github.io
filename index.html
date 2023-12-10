@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,28 @@
     <title>baeqspace's portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gugi">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
+    <div class="logo">baeqspace - portfolio menu</div>
     <div class="container">
-        <div class="logo">baeqspace - portfolio menu</div>
-        <a href="./Aperture/index.html" class="link">Aperture - photography studio</a>
-        <a href="./Appello/index.html" class="link">Appello - software development</a>
-        <a href="./Castaway/index.html" class="link">Castaway - podcast community</a>
-        <a href="./Evarugs/index.html" class="link">Evarugs - car carpets</a>
-        <a href="./Dance/index.html" class="link">Dance - your ebikes</a>
-        <a href="./Mein miner/index.html" class="link">Mein miner - mining tech</a>
-        <a href="./Domstroi/index.html" class="link">Domstroy - house building</a>
-        <a href="https://baeqspace.ru/baeq-social" class="link">baeq.social - React Social Network</a>
+        <nav class="works-nav">
+            <div id="landing-button" class="nav-elem selected">Landings</div>
+            <div id="react-button" class="nav-elem">React</div>
+        </nav>
+        <div class="links-container">
+            <a data-type="landing" href="./Aperture/index.html" class="link">Aperture - photography studio</a>
+            <a data-type="landing" href="./Appello/index.html" class="link">Appello - software development</a>
+            <a data-type="landing" href="./Castaway/index.html" class="link">Castaway - podcast community</a>
+            <a data-type="landing" href="./Evarugs/index.html" class="link">Evarugs - car carpets</a>
+            <a data-type="landing" href="./Dance/index.html" class="link">Dance - your ebikes</a>
+            <a data-type="landing" href="./Mein miner/index.html" class="link">Mein miner - mining tech</a>
+            <a data-type="landing" href="./Domstroi/index.html" class="link">Domstroy - house building</a>
+            <a data-type="react" href="https://baeqspace.ru/baeq-social" class="link hidden">baeq.social - React Social Network</a>
+            <a data-type="react" href="https://baeqspace.ru/baeq-aes" class="link hidden">baeq.AES - React Shop</a>
+        </div>
     </div>
 </body>
+
 </html>
